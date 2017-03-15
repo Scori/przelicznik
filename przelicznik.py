@@ -168,6 +168,53 @@ class Metr(Unit):
     display_name = "Metr"
     short_name = "m"
 
+class Inch(Unit):
+    value_type = Distance
+    display_name = "Inch"
+    short_name = "in"
+
+    @classmethod
+    def from_absolute_value(cls, value: Fraction):
+        return value / Fraction('0.0254')
+    @classmethod
+    def to_absolute_value(cls, value: Fraction):
+        return value * Fraction('0.0254')
+
+class Foot(Unit):
+    value_type = Distance
+    display_name = "Foot"
+    short_name = "ft"
+
+    @classmethod
+    def from_absolute_value(cls, value: Fraction):
+        return value / Fraction( "0.3048")
+    @classmethod
+    def to_absolute_value(cls, value: Fraction):
+        return value * Fraction( "0.3048")
+
+class Yard(Unit):
+    value_type = Distance
+    display_name = "Yard"
+    short_name = "yd"
+
+    @classmethod
+    def from_absolute_value(cls, value: Fraction):
+        return value / Fraction("0.9144")
+    @classmethod
+    def to_absolute_value(cls, value: Fraction):
+        return value * Fraction("0.9144")
+
+class Mile(Unit):
+    value_type = Distance
+    display_name = "Mile"
+    short_name = "mi"
+
+    @classmethod
+    def from_absolute_value(cls, value: Fraction):
+        return value / Fraction("1609.344")
+    @classmethod
+    def to_absolute_value(cls, value: Fraction):
+        return value * Fraction("1609.344")
 
 
 if __name__ == '__main__':
@@ -198,5 +245,17 @@ if __name__ == '__main__':
     print(F4)
     print(F4.convert_to(Pico(Kelvin)))
     print(F4.convert_to(Tera(Kelvin)))
+
+    In4= Inch(12)
+    print(In4)
+    print(In4.convert_to(Foot))
+
+    Ft3= Foot(3)
+    print(Ft3)
+    print(Ft3.convert_to(Yard))
+
+    Y= Yard(1760)
+    print(Y)
+    print(Y.convert_to(Mile))
 
 
