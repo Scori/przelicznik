@@ -50,7 +50,8 @@ class Prefix(Unit):
 
 class Temperature(ValueType):
     pass
-
+class Distance(ValueType):
+    pass
 
 class Kelvin(Unit):
     value_type = Temperature
@@ -83,6 +84,15 @@ class Fahrenheit(Unit):
     @classmethod
     def to_absolute_value(cls, value: Fraction):
         return Fraction('5/9') * (value - Fraction('32')) + Fraction('273.15')
+
+
+
+
+
+    class metr(Unit):
+        value_type = Distance
+        display_name = "metr"
+        short_name = "m"
 
 
 if __name__ == '__main__':
