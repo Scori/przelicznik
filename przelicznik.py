@@ -3,6 +3,7 @@ from fractions import Fraction
 import typing
 
 
+
 class ValueType:
     pass
 
@@ -162,10 +163,11 @@ class Fahrenheit(Unit):
         return Fraction('5/9') * (value - Fraction('32')) + Fraction('273.15')
 
 
-class Meter(Unit):
+class Metr(Unit):
     value_type = Distance
-    display_name = "Meter"
+    display_name = "Metr"
     short_name = "m"
+
 
 
 if __name__ == '__main__':
