@@ -120,7 +120,7 @@ class Application(tkinter.Frame):
         OUT = P_out(U_out)
         if IN.value_type.compatible_with(OUT.value_type):
             V_out = IN(v_in).convert_to(OUT)
-            v_out = V_out.smart_str(10)
+            v_out = V_out.smart_str(20)
             self.data_out.delete(0, 'end')
             self.data_out.insert(0, v_out)
 

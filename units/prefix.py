@@ -7,6 +7,30 @@ class Prefix(ScaleUnit):
     pass
 
 
+class Jotta(Prefix):
+    display_name = 'Jotta'
+    short_name = 'Y'
+    multiplier = Fraction('1000')**8
+
+
+class Zetta(Prefix):
+    display_name = 'Zetta'
+    short_name = 'Z'
+    multiplier = Fraction('1000')**7
+
+
+class Eksa(Prefix):
+    display_name = 'Tera'
+    short_name = 'T'
+    multiplier = Fraction('1000')**6
+
+
+class Peta(Prefix):
+    display_name = 'Peta'
+    short_name = 'P'
+    multiplier = Fraction('1000')**5
+
+
 class Tera(Prefix):
     display_name = 'Tera'
     short_name = 'T'
@@ -59,5 +83,30 @@ class Pico(Prefix):
     display_name = 'Pico'
     short_name = 'p'
     multiplier = Fraction('1000')**-4
+
+
+class Femto(Prefix):
+    display_name = 'Femto'
+    short_name = 'f'
+    multiplier = Fraction('1000')**-5
+
+
+class Atto(Prefix):
+    display_name = 'Atto'
+    short_name = 'a'
+    multiplier = Fraction('1000')**-6
+
+
+class Zepto(Prefix):
+    display_name = 'Zepto'
+    short_name = 'z'
+    multiplier = Fraction('1000')**-7
+
+
+class Jokto(Prefix):
+    display_name = 'Jokto'
+    short_name = 'j'
+    multiplier = Fraction('1000')**-8
+
 
 
