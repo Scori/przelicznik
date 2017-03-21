@@ -28,6 +28,9 @@ class MyTestCase(unittest.TestCase):
         k4 = Kelvin(4)
         with self.assertRaises(TypeError):
             k4.convert_to(Meter)
+        km4 = Meter(Kelvin)(4)
+        self.assertEqual(km4.convert_to(Kelvin(Meter)).fraction(), Fraction('4'))
+        self.assertEqual(km4.convert_to(Milli(Kelvin(Meter))).fraction(), Fraction('4000'))
 
     def test_prefix(self):
         k4 = Kelvin(4)
@@ -43,6 +46,26 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(km4k.convert_to(Milli(Kelvin)).absolute_value, Fraction('4'))
         self.assertEqual(km4k.convert_to(Milli(Kelvin)).fraction(), Fraction('4000'))
         self.assertEqual(km4k.convert_to(Milli(Celsius)).fraction(), Fraction('-269150'))
+
+    def test_f2s(self):
+        self.assertEqual(fraction_to_str(Fraction('0'), -2), '0')
+        self.assertEqual(fraction_to_str(Fraction('0'), -1), '0')
+        self.assertEqual(fraction_to_str(Fraction('0'), 0), '0')
+        self.assertEqual(fraction_to_str(Fraction('0'), 1), '0')
+        self.assertEqual(fraction_to_str(Fraction('0'), 2), '0')
+
+        self.assertEqual(fraction_to_str(Fraction('1234.5678'), -2), '1200')
+        self.assertEqual(fraction_to_str(Fraction('1234.5678'), -1), '1230')
+        self.assertEqual(fraction_to_str(Fraction('1234.5678'), 0), '1234')
+        self.assertEqual(fraction_to_str(Fraction('1234.5678'), 1), '1234.5')
+        self.assertEqual(fraction_to_str(Fraction('1234.5678'), 2), '1234.56')
+        self.assertEqual(fraction_to_str(Fraction('1234.5678'), 10), '1234.5678')
+
+        self.assertEqual(fraction_to_str(Fraction('10/3'), 10), '3.3333333333')
+        self.assertEqual(fraction_to_str(Fraction('123456789/987654321098765432109876543210'), 50), '0.00000000000000000000012499999884843750012814453124')
+
+
+
 
 
 if __name__ == '__main__':

@@ -5,7 +5,7 @@ from .core import ValueType, Unit
 
 
 class Temperature(ValueType):
-    pass
+    display_name = 'Temperature'
 
 
 class Kelvin(Unit):

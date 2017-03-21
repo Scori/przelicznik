@@ -5,7 +5,7 @@ from .core import ValueType, Unit
 
 
 class Distance(ValueType):
-    pass
+    display_name = 'Distance'
 
 
 class Meter(Unit):
@@ -35,10 +35,11 @@ class Foot(Unit):
 
     @classmethod
     def from_absolute_value(cls, value: Fraction):
-        return value / Fraction( "0.3048")
+        return value / Fraction("0.3048")
+
     @classmethod
     def to_absolute_value(cls, value: Fraction):
-        return value * Fraction( "0.3048")
+        return value * Fraction("0.3048")
 
 
 class Yard(Unit):
@@ -49,9 +50,11 @@ class Yard(Unit):
     @classmethod
     def from_absolute_value(cls, value: Fraction):
         return value / Fraction("0.9144")
+
     @classmethod
     def to_absolute_value(cls, value: Fraction):
         return value * Fraction("0.9144")
+
 
 class Mile(Unit):
     value_type = Distance
@@ -61,6 +64,7 @@ class Mile(Unit):
     @classmethod
     def from_absolute_value(cls, value: Fraction):
         return value / Fraction("1609.344")
+
     @classmethod
     def to_absolute_value(cls, value: Fraction):
         return value * Fraction("1609.344")

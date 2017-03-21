@@ -1,16 +1,20 @@
 # coding: utf8
 from fractions import Fraction
+from collections import Counter
+from .utils import fraction_to_str
 import typing
 
 
 class ValueType:
-    types = set([])
+    display_name = ''
+    types = Counter([])
+    units = []
 
     @classmethod
-    def get_types(cls):
+    def get_types(cls) -> Counter:
         if cls.types:
             return cls.types
-        return set([cls])
+        return Counter([cls])
 
     @classmethod
     def compatible_with(cls, value_type):
@@ -20,13 +24,16 @@ class ValueType:
         types = cls.get_types()
         for t in value_types:
             types.update(t.get_types())
-        types.discard(ValueType)
+        types.pop(ValueType, None)
         if not types:
             return ValueType
         return type(
-            ''.join([t.__name__ for t in types]),
+            ''.join([t.__name__ * k for t, k in types.items()]),
             (ValueType, ),
-            {'types': types},
+            {
+                'types': types,
+                'display_name': ''.join([t.display_name for t, k in types.items() for _ in range(k)])
+             },
         )
 
 
@@ -50,11 +57,14 @@ class Unit:
     def fraction(self) -> Fraction:
         return self.from_absolute_value(self.absolute_value)
 
+    def smart_str(self, precision=5):
+        return fraction_to_str(self.fraction(),  precision)
+
     def __float__(self) -> float:
         return self.fraction().__float__()
 
     def __str__(self) -> str:
-        return '{0:.10g}{1}'.format(self.__float__(), self.short_name)
+        return '{0}{1}'.format(self.smart_str(), self.short_name)
 
     def __repr__(self) -> str:
         return '{0}({1})'.format(type(self).__qualname__, self.absolute_value.__repr__())
@@ -72,10 +82,13 @@ class Unit:
             },
         )
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls, *args, **kwargs) -> typing.TypeVar('Unit'):
         if kwargs == {} and args and all([isinstance(arg, type) and issubclass(arg, Unit) for arg in args]):
             return cls.create_unit([cls] + list(args))
         return super(Unit, cls).__new__(cls)
+
+    def __call__(self, *args, **kwargs) -> 'Unit':
+        raise NotImplemented
 
     @classmethod
     def from_absolute_value(cls, value: Fraction) -> Fraction:

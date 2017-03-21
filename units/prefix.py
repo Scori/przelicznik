@@ -3,55 +3,59 @@ from fractions import Fraction
 from .core import ScaleUnit
 
 
-class Tera(ScaleUnit):
+class Prefix(ScaleUnit):
+    pass
+
+
+class Tera(Prefix):
     display_name = 'Tera'
     short_name = 'T'
     multiplier = Fraction('1000')**4
 
 
-class Giga(ScaleUnit):
+class Giga(Prefix):
     display_name = 'Giga'
     short_name = 'G'
     multiplier = Fraction('1000')**3
 
 
-class Mega(ScaleUnit):
+class Mega(Prefix):
     display_name = 'Mega'
     short_name = 'M'
     multiplier = Fraction('1000')**2
 
 
-class Kilo(ScaleUnit):
+class Kilo(Prefix):
     display_name = 'Kilo'
     short_name = 'k'
     multiplier = Fraction('1000')**1
 
 
-class One(ScaleUnit):
-    display_name = ''
+class One(Prefix):
+    display_name = '-'
     short_name = ''
     multiplier = Fraction('1000')**0
 
 
-class Milli(ScaleUnit):
+class Milli(Prefix):
     display_name = 'Milli'
     short_name = 'm'
     multiplier = Fraction('1000')**-1
 
 
-class Micro(ScaleUnit):
+class Micro(Prefix):
     display_name = 'Micro'
     short_name = 'μ'
     multiplier = Fraction('1000')**-2
 
 
-class Nano(ScaleUnit):
+class Nano(Prefix):
     display_name = 'Nano'
     short_name = 'n'
     multiplier = Fraction('1000')**-3
 
 
-class Pico(ScaleUnit):
+class Pico(Prefix):
     display_name = 'Pico'
     short_name = 'p'
     multiplier = Fraction('1000')**-4
