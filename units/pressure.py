@@ -30,11 +30,11 @@ class Atmosphere(Unit):
 
     @classmethod
     def from_absolute_value(cls, value: Fraction):
-        return value*Fraction('101325')
+        return value/Fraction('101325')
 
     @classmethod
     def to_absolute_value(cls, value: Fraction):
-        return value/Fraction('101325')
+        return value*Fraction('101325')
 
 class Tor(Unit):
     value_type = Pressure
@@ -43,11 +43,11 @@ class Tor(Unit):
 
     @classmethod
     def from_absolute_value(cls, value: Fraction):
-        return value*Fraction('133.3224')
+        return value/Fraction('133.3224')
 
     @classmethod
     def to_absolute_value(cls, value: Fraction):
-        return value/Fraction('133.3224')
+        return value*Fraction('133.3224')
 
 class Psi(Unit):
     value_type = Pressure
@@ -56,8 +56,8 @@ class Psi(Unit):
 
     @classmethod
     def from_absolute_value(cls, value: Fraction):
-        return value*Fraction('6894.75729')
+        return value/Fraction('6894.75729')
 
     @classmethod
     def to_absolute_value(cls, value: Fraction):
-        return value/Fraction('6894.75729')
+        return value*Fraction('6894.75729')
