@@ -7,6 +7,9 @@ from .utils import *
 from .prefix import *
 from .temperature import *
 from .distance import *
+from .pressure import *
+from .energy import *
+from .power import *
 
 
 value_types = sorted(set(get_all_subclasses(ValueType)), key=lambda x: x.__name__)

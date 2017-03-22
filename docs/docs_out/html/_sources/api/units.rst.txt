@@ -1,7 +1,7 @@
 units package
 =============
 
-.. inheritance-diagram:: units.core units.prefix units.utils units.temperature units.distance
+.. inheritance-diagram:: units.core units.prefix units.utils units.temperature units.distance units.pressure units.energy units.power
 
 Class diagram
 -------------

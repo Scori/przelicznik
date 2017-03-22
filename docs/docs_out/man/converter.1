@@ -1,8 +1,8 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CONVERTER" "1" "Mar 22, 2017" "0.0.post0.dev13+nfefc09d.dirty" "converter"
+.TH "CONVERTER" "1" "Mar 22, 2017" "0.0.post0.dev18+n66e5977.dirty" "converter"
 .SH NAME
-converter \- converter 0.0.post0.dev13+nfefc09d.dirty
+converter \- converter 0.0.post0.dev18+n66e5977.dirty
 .
 .nr rst2man-indent-level 0
 .
@@ -327,11 +327,62 @@ Bases: \fI\%units.prefix.Prefix\fP
 .UNINDENT
 .INDENT 0.0
 .TP
+.B class units.prefix.Centy(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqCenty\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 100)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqcm\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Decy(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqDecy\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 10)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqdm\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Deka(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqDeka\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(10, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqdag\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
 .B class units.prefix.Eksa(value: typing.Any, is_absolute=False)
 Bases: \fI\%units.prefix.Prefix\fP
 .INDENT 7.0
 .TP
-.B display_name = \(aqTera\(aq
+.B display_name = \(aqEksa\(aq
 .UNINDENT
 .INDENT 7.0
 .TP
@@ -374,6 +425,23 @@ Bases: \fI\%units.prefix.Prefix\fP
 .INDENT 7.0
 .TP
 .B short_name = \(aqG\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Hekto(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqHekto\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(100, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqhl\(aq
 .UNINDENT
 .UNINDENT
 .INDENT 0.0
@@ -830,6 +898,316 @@ Bases: \fBunits.core.Unit\fP
 .TP
 .B value_type
 alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.SS units.pressure module
+.SS Class diagram
+[image]
+.INDENT 0.0
+.TP
+.B class units.pressure.Atmosphere(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqAtmosphere\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqatm\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Pressure\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.pressure.Bar(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqBar\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqbar\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Pressure\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.pressure.Pascal(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqPascal\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqPa\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Pressure\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.pressure.Pressure
+Bases: \fBunits.core.ValueType\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqPressure\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B units = [<class \(aqunits.pressure.Atmosphere\(aq>, <class \(aqunits.pressure.Bar\(aq>, <class \(aqunits.pressure.Pascal\(aq>, <class \(aqunits.pressure.Psi\(aq>, <class \(aqunits.pressure.Tor\(aq>]
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.pressure.Psi(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqPsi\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqpsi\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Pressure\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.pressure.Tor(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqTor\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqmm Hg\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Pressure\fP
+.UNINDENT
+.UNINDENT
+.SS units.energy module
+.SS Class diagram
+[image]
+.INDENT 0.0
+.TP
+.B class units.energy.Calorie(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqCalorie\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqcal\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Energy\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.energy.Electronvolt(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqElectronvolt\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqeV\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Energy\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.energy.Energy
+Bases: \fBunits.core.ValueType\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqEnergy\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B units = [<class \(aqunits.energy.Calorie\(aq>, <class \(aqunits.energy.Electronvolt\(aq>, <class \(aqunits.energy.Joule\(aq>, <class \(aqunits.energy.Kilowatthour\(aq>]
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.energy.Joule(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqJoule\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqJ\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Energy\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.energy.Kilowatthour(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqKilowatt hour\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqkWh\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Energy\fP
+.UNINDENT
+.UNINDENT
+.SS units.power module
+.SS Class diagram
+[image]
+.INDENT 0.0
+.TP
+.B class units.power.Horsepower(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqHorsepower\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqhpm\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Power\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.power.Power
+Bases: \fBunits.core.ValueType\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqPower\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B units = [<class \(aqunits.power.Horsepower\(aq>, <class \(aqunits.power.Watt\(aq>]
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.power.Watt(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqWatt\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqW\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Power\fP
 .UNINDENT
 .UNINDENT
 .SH INDICES AND TABLES

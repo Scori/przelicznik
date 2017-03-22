@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>units.pressure module &#8212; converter 0.0.post0.dev18+n66e5977.dirty documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.post0.dev18+n66e5977.dirty',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="units.energy module" href="units.energy.html" />
+    <link rel="prev" title="units.distance module" href="units.distance.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="units-pressure-module">
+<h1>units.pressure module<a class="headerlink" href="#units-pressure-module" title="Permalink to this headline">¶</a></h1>
+<img src="../_images/inheritance-8546a2d5fa3ab6091ab2a73ff4d7305accf127be.png" alt="Inheritance diagram of units.pressure" usemap="#inheritancef170450233" class="inheritance"/>
+<map id="inheritancef170450233" name="inheritancef170450233">
+<area shape="rect" id="node1" href="units.core.html#units.core.Unit" target="_top" title="Class representing unit of given *value_type*. Instances of this class represent not only unit but also its value." alt="" coords="24,153,131,179"/>
+<area shape="rect" id="node3" href="#units.pressure.Atmosphere" target="_top" title="units.pressure.Atmosphere" alt="" coords="197,55,376,80"/>
+<area shape="rect" id="node4" href="#units.pressure.Bar" target="_top" title="units.pressure.Bar" alt="" coords="223,104,351,129"/>
+<area shape="rect" id="node5" href="#units.pressure.Pascal" target="_top" title="units.pressure.Pascal" alt="" coords="213,153,361,179"/>
+<area shape="rect" id="node7" href="#units.pressure.Psi" target="_top" title="units.pressure.Psi" alt="" coords="223,203,350,228"/>
+<area shape="rect" id="node8" href="#units.pressure.Tor" target="_top" title="units.pressure.Tor" alt="" coords="223,252,350,277"/>
+<area shape="rect" id="node2" href="units.core.html#units.core.ValueType" target="_top" title="Abstract class representing type of value." alt="" coords="5,5,149,31"/>
+<area shape="rect" id="node6" href="#units.pressure.Pressure" target="_top" title="units.pressure.Pressure" alt="" coords="207,5,367,31"/>
+</map>
+<div class="section" id="class-diagram">
+<h2>Class diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="api\uml_images\classes_pressure.png"><img alt="api\uml_images\classes_pressure.png" src="api\uml_images\classes_pressure.png" /></a>
+<span class="target" id="module-units.pressure"></span><dl class="class">
+<dt id="units.pressure.Atmosphere">
+<em class="property">class </em><code class="descclassname">units.pressure.</code><code class="descname">Atmosphere</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Atmosphere"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Atmosphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.pressure.Atmosphere.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Atmosphere'</em><a class="headerlink" href="#units.pressure.Atmosphere.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.pressure.Atmosphere.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Atmosphere.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Atmosphere.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Atmosphere.short_name">
+<code class="descname">short_name</code><em class="property"> = 'atm'</em><a class="headerlink" href="#units.pressure.Atmosphere.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.pressure.Atmosphere.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Atmosphere.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Atmosphere.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Atmosphere.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.pressure.Atmosphere.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.pressure.Pressure" title="units.pressure.Pressure"><code class="xref py py-class docutils literal"><span class="pre">Pressure</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.pressure.Bar">
+<em class="property">class </em><code class="descclassname">units.pressure.</code><code class="descname">Bar</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Bar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Bar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.pressure.Bar.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Bar'</em><a class="headerlink" href="#units.pressure.Bar.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.pressure.Bar.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Bar.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Bar.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Bar.short_name">
+<code class="descname">short_name</code><em class="property"> = 'bar'</em><a class="headerlink" href="#units.pressure.Bar.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.pressure.Bar.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Bar.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Bar.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Bar.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.pressure.Bar.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.pressure.Pressure" title="units.pressure.Pressure"><code class="xref py py-class docutils literal"><span class="pre">Pressure</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.pressure.Pascal">
+<em class="property">class </em><code class="descclassname">units.pressure.</code><code class="descname">Pascal</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Pascal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Pascal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.pressure.Pascal.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Pascal'</em><a class="headerlink" href="#units.pressure.Pascal.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Pascal.short_name">
+<code class="descname">short_name</code><em class="property"> = 'Pa'</em><a class="headerlink" href="#units.pressure.Pascal.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Pascal.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.pressure.Pascal.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.pressure.Pressure" title="units.pressure.Pressure"><code class="xref py py-class docutils literal"><span class="pre">Pressure</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.pressure.Pressure">
+<em class="property">class </em><code class="descclassname">units.pressure.</code><code class="descname">Pressure</code><a class="reference internal" href="../_modules/units/pressure.html#Pressure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Pressure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.ValueType" title="units.core.ValueType"><code class="xref py py-class docutils literal"><span class="pre">units.core.ValueType</span></code></a></p>
+<dl class="attribute">
+<dt id="units.pressure.Pressure.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Pressure'</em><a class="headerlink" href="#units.pressure.Pressure.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Pressure.units">
+<code class="descname">units</code><em class="property"> = [&lt;class 'units.pressure.Atmosphere'&gt;, &lt;class 'units.pressure.Bar'&gt;, &lt;class 'units.pressure.Pascal'&gt;, &lt;class 'units.pressure.Psi'&gt;, &lt;class 'units.pressure.Tor'&gt;]</em><a class="headerlink" href="#units.pressure.Pressure.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.pressure.Psi">
+<em class="property">class </em><code class="descclassname">units.pressure.</code><code class="descname">Psi</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Psi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Psi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.pressure.Psi.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Psi'</em><a class="headerlink" href="#units.pressure.Psi.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.pressure.Psi.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Psi.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Psi.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Psi.short_name">
+<code class="descname">short_name</code><em class="property"> = 'psi'</em><a class="headerlink" href="#units.pressure.Psi.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.pressure.Psi.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Psi.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Psi.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Psi.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.pressure.Psi.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.pressure.Pressure" title="units.pressure.Pressure"><code class="xref py py-class docutils literal"><span class="pre">Pressure</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.pressure.Tor">
+<em class="property">class </em><code class="descclassname">units.pressure.</code><code class="descname">Tor</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Tor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Tor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.pressure.Tor.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Tor'</em><a class="headerlink" href="#units.pressure.Tor.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.pressure.Tor.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Tor.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Tor.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Tor.short_name">
+<code class="descname">short_name</code><em class="property"> = 'mm Hg'</em><a class="headerlink" href="#units.pressure.Tor.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.pressure.Tor.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/pressure.html#Tor.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.pressure.Tor.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.pressure.Tor.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.pressure.Tor.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.pressure.Pressure" title="units.pressure.Pressure"><code class="xref py py-class docutils literal"><span class="pre">Pressure</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">units.pressure module</a><ul>
+<li><a class="reference internal" href="#class-diagram">Class diagram</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Modules</a><ul>
+      <li>Previous: <a href="units.distance.html" title="previous chapter">units.distance module</a></li>
+      <li>Next: <a href="units.energy.html" title="next chapter">units.energy module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/units.pressure.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Sim1234.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/api/units.pressure.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

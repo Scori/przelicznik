@@ -12,3 +12,6 @@ Modules
    units.prefix
    units.temperature
    units.distance
+   units.pressure
+   units.energy
+   units.power

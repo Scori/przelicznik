@@ -25,7 +25,7 @@ class Zetta(Prefix):
 
 
 class Eksa(Prefix):
-    display_name = 'Tera'
+    display_name = 'Eksa'
     short_name = 'T'
     multiplier = Fraction('1000')**6
 

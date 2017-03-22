@@ -1,0 +1,9 @@
+<map id="inheritancee50e5fc82f" name="inheritancee50e5fc82f">
+<area shape="rect" id="node1" href="units.core.html#units.core.Unit" target="_top" title="Class representing unit of given *value_type*. Instances of this class represent not only unit but also its value." alt="" coords="24,129,131,155"/>
+<area shape="rect" id="node3" href="#units.energy.Calorie" target="_top" title="units.energy.Calorie" alt="" coords="213,55,350,80"/>
+<area shape="rect" id="node4" href="#units.energy.Electronvolt" target="_top" title="units.energy.Electronvolt" alt="" coords="199,104,363,129"/>
+<area shape="rect" id="node6" href="#units.energy.Joule" target="_top" title="units.energy.Joule" alt="" coords="218,153,345,179"/>
+<area shape="rect" id="node7" href="#units.energy.Kilowatthour" target="_top" title="units.energy.Kilowatthour" alt="" coords="197,203,365,228"/>
+<area shape="rect" id="node2" href="units.core.html#units.core.ValueType" target="_top" title="Abstract class representing type of value." alt="" coords="5,5,149,31"/>
+<area shape="rect" id="node5" href="#units.energy.Energy" target="_top" title="units.energy.Energy" alt="" coords="212,5,351,31"/>
+</map>

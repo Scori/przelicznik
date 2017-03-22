@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>units.energy module &#8212; converter 0.0.post0.dev18+n66e5977.dirty documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.post0.dev18+n66e5977.dirty',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="units.power module" href="units.power.html" />
+    <link rel="prev" title="units.pressure module" href="units.pressure.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="units-energy-module">
+<h1>units.energy module<a class="headerlink" href="#units-energy-module" title="Permalink to this headline">¶</a></h1>
+<img src="../_images/inheritance-897684b1612313282453571c000cd24400e46016.png" alt="Inheritance diagram of units.energy" usemap="#inheritancee50e5fc82f" class="inheritance"/>
+<map id="inheritancee50e5fc82f" name="inheritancee50e5fc82f">
+<area shape="rect" id="node1" href="units.core.html#units.core.Unit" target="_top" title="Class representing unit of given *value_type*. Instances of this class represent not only unit but also its value." alt="" coords="24,129,131,155"/>
+<area shape="rect" id="node3" href="#units.energy.Calorie" target="_top" title="units.energy.Calorie" alt="" coords="213,55,350,80"/>
+<area shape="rect" id="node4" href="#units.energy.Electronvolt" target="_top" title="units.energy.Electronvolt" alt="" coords="199,104,363,129"/>
+<area shape="rect" id="node6" href="#units.energy.Joule" target="_top" title="units.energy.Joule" alt="" coords="218,153,345,179"/>
+<area shape="rect" id="node7" href="#units.energy.Kilowatthour" target="_top" title="units.energy.Kilowatthour" alt="" coords="197,203,365,228"/>
+<area shape="rect" id="node2" href="units.core.html#units.core.ValueType" target="_top" title="Abstract class representing type of value." alt="" coords="5,5,149,31"/>
+<area shape="rect" id="node5" href="#units.energy.Energy" target="_top" title="units.energy.Energy" alt="" coords="212,5,351,31"/>
+</map>
+<div class="section" id="class-diagram">
+<h2>Class diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="api\uml_images\classes_energy.png"><img alt="api\uml_images\classes_energy.png" src="api\uml_images\classes_energy.png" /></a>
+<span class="target" id="module-units.energy"></span><dl class="class">
+<dt id="units.energy.Calorie">
+<em class="property">class </em><code class="descclassname">units.energy.</code><code class="descname">Calorie</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Calorie"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Calorie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.energy.Calorie.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Calorie'</em><a class="headerlink" href="#units.energy.Calorie.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.energy.Calorie.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Calorie.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Calorie.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.energy.Calorie.short_name">
+<code class="descname">short_name</code><em class="property"> = 'cal'</em><a class="headerlink" href="#units.energy.Calorie.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.energy.Calorie.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Calorie.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Calorie.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.energy.Calorie.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.energy.Calorie.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.energy.Energy" title="units.energy.Energy"><code class="xref py py-class docutils literal"><span class="pre">Energy</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.energy.Electronvolt">
+<em class="property">class </em><code class="descclassname">units.energy.</code><code class="descname">Electronvolt</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Electronvolt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Electronvolt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.energy.Electronvolt.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Electronvolt'</em><a class="headerlink" href="#units.energy.Electronvolt.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.energy.Electronvolt.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Electronvolt.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Electronvolt.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.energy.Electronvolt.short_name">
+<code class="descname">short_name</code><em class="property"> = 'eV'</em><a class="headerlink" href="#units.energy.Electronvolt.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.energy.Electronvolt.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Electronvolt.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Electronvolt.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.energy.Electronvolt.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.energy.Electronvolt.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.energy.Energy" title="units.energy.Energy"><code class="xref py py-class docutils literal"><span class="pre">Energy</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.energy.Energy">
+<em class="property">class </em><code class="descclassname">units.energy.</code><code class="descname">Energy</code><a class="reference internal" href="../_modules/units/energy.html#Energy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.ValueType" title="units.core.ValueType"><code class="xref py py-class docutils literal"><span class="pre">units.core.ValueType</span></code></a></p>
+<dl class="attribute">
+<dt id="units.energy.Energy.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Energy'</em><a class="headerlink" href="#units.energy.Energy.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.energy.Energy.units">
+<code class="descname">units</code><em class="property"> = [&lt;class 'units.energy.Calorie'&gt;, &lt;class 'units.energy.Electronvolt'&gt;, &lt;class 'units.energy.Joule'&gt;, &lt;class 'units.energy.Kilowatthour'&gt;]</em><a class="headerlink" href="#units.energy.Energy.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.energy.Joule">
+<em class="property">class </em><code class="descclassname">units.energy.</code><code class="descname">Joule</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Joule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Joule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.energy.Joule.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Joule'</em><a class="headerlink" href="#units.energy.Joule.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.energy.Joule.short_name">
+<code class="descname">short_name</code><em class="property"> = 'J'</em><a class="headerlink" href="#units.energy.Joule.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.energy.Joule.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.energy.Joule.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.energy.Energy" title="units.energy.Energy"><code class="xref py py-class docutils literal"><span class="pre">Energy</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.energy.Kilowatthour">
+<em class="property">class </em><code class="descclassname">units.energy.</code><code class="descname">Kilowatthour</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Kilowatthour"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Kilowatthour" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.energy.Kilowatthour.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Kilowatt hour'</em><a class="headerlink" href="#units.energy.Kilowatthour.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.energy.Kilowatthour.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Kilowatthour.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Kilowatthour.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.energy.Kilowatthour.short_name">
+<code class="descname">short_name</code><em class="property"> = 'kWh'</em><a class="headerlink" href="#units.energy.Kilowatthour.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.energy.Kilowatthour.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/energy.html#Kilowatthour.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.energy.Kilowatthour.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.energy.Kilowatthour.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.energy.Kilowatthour.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.energy.Energy" title="units.energy.Energy"><code class="xref py py-class docutils literal"><span class="pre">Energy</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">units.energy module</a><ul>
+<li><a class="reference internal" href="#class-diagram">Class diagram</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Modules</a><ul>
+      <li>Previous: <a href="units.pressure.html" title="previous chapter">units.pressure module</a></li>
+      <li>Next: <a href="units.power.html" title="next chapter">units.power module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/units.energy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Sim1234.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/api/units.energy.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
