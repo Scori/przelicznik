@@ -1,8 +1,8 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CONVERTER" "1" "Mar 22, 2017" "0.0.post0.dev12+n7834dd9.dirty" "converter"
+.TH "CONVERTER" "1" "Mar 22, 2017" "0.0.post0.dev13+nfefc09d.dirty" "converter"
 .SH NAME
-converter \- converter 0.0.post0.dev12+n7834dd9.dirty
+converter \- converter 0.0.post0.dev13+nfefc09d.dirty
 .
 .nr rst2man-indent-level 0
 .
@@ -84,6 +84,8 @@ Features added
 .UNINDENT
 .SS Modules
 .SS gui module
+.SS Class diagram
+[image]
 .sp
 Module containing all GUI related code.
 .INDENT 0.0
@@ -129,6 +131,8 @@ Utility function for creating and binding tkinter.StringVar objects.
 Utility function for updating options of tkinter.OptionMenu widget.
 .UNINDENT
 .SS test module
+.SS Class diagram
+[image]
 .sp
 Module containing all test related code.
 .INDENT 0.0
@@ -159,10 +163,14 @@ Test Unit.value_type validation.
 .UNINDENT
 .UNINDENT
 .SS units package
+.SS Class diagram
+[image]
 .SS Module contents
 .sp
 Package providing unit conversion functionality.
 .SS units.core module
+.SS Class diagram
+[image]
 .sp
 Core module for units package. Defines base classes like ValueType and Unit and utility class ScaleUnit.
 .INDENT 0.0
@@ -281,6 +289,8 @@ Returns Counter object containing all base value type classes \- representation 
 .UNINDENT
 .UNINDENT
 .SS units.utils module
+.SS Class diagram
+[image]
 .sp
 Module containing internal utility functions.
 .INDENT 0.0
@@ -294,6 +304,8 @@ Convert Fraction to str with given precision.
 Get all subclasses of given class.
 .UNINDENT
 .SS units.prefix module
+.SS Class diagram
+[image]
 .sp
 Module containing Unit subclasses associated with SI prefixes.
 .INDENT 0.0
@@ -593,6 +605,8 @@ Bases: \fI\%units.prefix.Prefix\fP
 .UNINDENT
 .UNINDENT
 .SS units.temperature module
+.SS Class diagram
+[image]
 .sp
 Module containing ValueType and Unit subclasses associated with temperature.
 .INDENT 0.0
@@ -679,6 +693,8 @@ Bases: \fBunits.core.ValueType\fP
 .UNINDENT
 .UNINDENT
 .SS units.distance module
+.SS Class diagram
+[image]
 .sp
 Module containing ValueType and Unit subclasses associated with distance.
 .INDENT 0.0
