@@ -46,7 +46,9 @@ if on_rtd:
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.intersphinx', 'sphinx.ext.todo',
               'sphinx.ext.autosummary', 'sphinx.ext.viewcode', 'sphinx.ext.coverage',
               'sphinx.ext.doctest', 'sphinx.ext.ifconfig', 'sphinx.ext.pngmath',
-              'sphinx.ext.napoleon']
+              'sphinx.ext.napoleon',
+              'sphinx.ext.graphviz', 'sphinx.ext.inheritance_diagram',
+              ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -61,7 +63,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'test'
+project = u'converter'
 copyright = u'2017, Sim1234'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -212,7 +214,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'user_guide.tex', u'test Documentation',
+  ('index', 'user_guide.tex', u'Converter Documentation',
    u'Sim1234', 'manual'),
 ]
 

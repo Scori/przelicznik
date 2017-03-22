@@ -1,0 +1,10 @@
+<map id="inheritancea0d65241b0" name="inheritancea0d65241b0">
+<area shape="rect" id="node1" href="#gui.Application" target="_top" title="Main GUI class. Creates widgets, handles data input and delegates unit conversion to *units* library." alt="" coords="623,80,729,105"/>
+<area shape="rect" id="node2" title="Frame widget which may contain other widgets and can have a 3D border." alt="" coords="476,80,575,105"/>
+<area shape="rect" id="node3" title="Internal class." alt="" coords="144,5,277,31"/>
+<area shape="rect" id="node5" title="Internal class." alt="" coords="325,80,428,105"/>
+<area shape="rect" id="node4" title="Internal class." alt="" coords="5,5,96,31"/>
+<area shape="rect" id="node6" title="Geometry manager Grid." alt="" coords="167,55,254,80"/>
+<area shape="rect" id="node7" title="Geometry manager Pack." alt="" coords="165,104,257,129"/>
+<area shape="rect" id="node8" title="Geometry manager Place." alt="" coords="163,153,258,179"/>
+</map>

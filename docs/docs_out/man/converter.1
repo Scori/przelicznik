@@ -1,8 +1,8 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CONVERTER" "1" "Mar 22, 2017" "0.0.post0.dev11+n54ce49d.dirty" "converter"
+.TH "CONVERTER" "1" "Mar 22, 2017" "0.0.post0.dev12+n7834dd9.dirty" "converter"
 .SH NAME
-converter \- converter 0.0.post0.dev11+n54ce49d.dirty
+converter \- converter 0.0.post0.dev12+n7834dd9.dirty
 .
 .nr rst2man-indent-level 0
 .
@@ -31,7 +31,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-This is the documentation of \fBtest\fP\&.
+This is the documentation of \fBConverter\fP\&.
 .sp
 \fBNOTE:\fP
 .INDENT 0.0
@@ -84,68 +84,93 @@ Features added
 .UNINDENT
 .SS Modules
 .SS gui module
+.sp
+Module containing all GUI related code.
 .INDENT 0.0
 .TP
 .B class gui.Application(master=None)
 Bases: \fBtkinter.Frame\fP
+.sp
+Main GUI class. Creates widgets, handles data input and delegates unit conversion to \fIunits\fP library.
 .INDENT 7.0
 .TP
 .B on_change_data(*args)
+Selected units, prefixes and input data change handler. Performs unit conversion.
 .UNINDENT
 .INDENT 7.0
 .TP
 .B on_change_type(data)
+Selected variable type change handler.
 .UNINDENT
 .INDENT 7.0
 .TP
 .B on_switch()
+Unit switch button handler.
 .UNINDENT
 .UNINDENT
 .INDENT 0.0
 .TP
 .B gui.main()
+Application main function.
 .UNINDENT
 .INDENT 0.0
 .TP
 .B gui.pull_down_menu(master, options, default=None, callback=None, **kwargs)
+Utility function for creating tkinter.OptionMenu widgets.
 .UNINDENT
 .INDENT 0.0
 .TP
 .B gui.textvariable(master, default=\(aq\(aq, callback=None)
+Utility function for creating and binding tkinter.StringVar objects.
 .UNINDENT
 .INDENT 0.0
 .TP
 .B gui.update_pdm(pdm, options, default=None)
+Utility function for updating options of tkinter.OptionMenu widget.
 .UNINDENT
 .SS test module
+.sp
+Module containing all test related code.
 .INDENT 0.0
 .TP
-.B class test.MyTestCase(methodName=\(aqrunTest\(aq)
+.B class test.UnitsTestCase(methodName=\(aqrunTest\(aq)
 Bases: \fBunittest.case.TestCase\fP
+.sp
+Test container for units library.
 .INDENT 7.0
 .TP
 .B test_f2s()
+Test Fraction to str conversion.
 .UNINDENT
 .INDENT 7.0
 .TP
 .B test_prefix()
+Test Prefix and MultiUnit functionality.
 .UNINDENT
 .INDENT 7.0
 .TP
 .B test_temperature()
+Test temperature conversions.
 .UNINDENT
 .INDENT 7.0
 .TP
 .B test_value_type()
+Test Unit.value_type validation.
 .UNINDENT
 .UNINDENT
 .SS units package
-.SS Submodules
+.SS Module contents
+.sp
+Package providing unit conversion functionality.
 .SS units.core module
+.sp
+Core module for units package. Defines base classes like ValueType and Unit and utility class ScaleUnit.
 .INDENT 0.0
 .TP
 .B class units.core.ScaleUnit(value: typing.Any, is_absolute=False)
 Bases: \fI\%units.core.Unit\fP
+.sp
+Utility class providing scaling functionality.
 .INDENT 7.0
 .TP
 .B display_name = \(aq\(aq
@@ -176,13 +201,17 @@ alias of \fI\%Unit\fP
 .TP
 .B class units.core.Unit(value: typing.Any, is_absolute=False)
 Bases: \fI\%object\fP
+.sp
+Class representing unit of given \fIvalue_type\fP\&. Instances of this class represent not only unit but also its value.
 .INDENT 7.0
 .TP
-.B convert_to(unit) -> units.core.Unit
+.B convert_to(unit: Unit) -> units.core.Unit
+Returns new Unit instance representing current value in given \fIunit\fP\&.
 .UNINDENT
 .INDENT 7.0
 .TP
 .B classmethod create_unit(units)
+Create new Unit subclass representing product of given units.
 .UNINDENT
 .INDENT 7.0
 .TP
@@ -191,10 +220,12 @@ Bases: \fI\%object\fP
 .INDENT 7.0
 .TP
 .B fraction() -> fractions.Fraction
+Get fraction representation of current value.
 .UNINDENT
 .INDENT 7.0
 .TP
 .B classmethod from_absolute_value(value: fractions.Fraction) -> fractions.Fraction
+Converts from absolute value to value in this unit.
 .UNINDENT
 .INDENT 7.0
 .TP
@@ -203,10 +234,12 @@ Bases: \fI\%object\fP
 .INDENT 7.0
 .TP
 .B smart_str(precision=5)
+Get str representation of current value with given \fIprecision\fP\&.
 .UNINDENT
 .INDENT 7.0
 .TP
 .B classmethod to_absolute_value(value: fractions.Fraction) -> fractions.Fraction
+Converts from value in this unit to absolute value.
 .UNINDENT
 .INDENT 7.0
 .TP
@@ -222,9 +255,12 @@ alias of \fI\%ValueType\fP
 .TP
 .B class units.core.ValueType
 Bases: \fI\%object\fP
+.sp
+Abstract class representing type of value.
 .INDENT 7.0
 .TP
-.B classmethod compatible_with(value_type)
+.B classmethod compatible_with(value_type: ValueType) -> bool
+Check if given \fIvalue_type\fP class is equivalent with \fIself\fP\&.
 .UNINDENT
 .INDENT 7.0
 .TP
@@ -233,6 +269,7 @@ Bases: \fI\%object\fP
 .INDENT 7.0
 .TP
 .B classmethod get_types() -> collections.Counter
+Returns Counter object containing all base value type classes \- representation of whole type.
 .UNINDENT
 .INDENT 7.0
 .TP
@@ -243,143 +280,22 @@ Bases: \fI\%object\fP
 .B units = []
 .UNINDENT
 .UNINDENT
-.SS units.distance module
+.SS units.utils module
+.sp
+Module containing internal utility functions.
 .INDENT 0.0
 .TP
-.B class units.distance.Distance
-Bases: \fI\%units.core.ValueType\fP
-.INDENT 7.0
-.TP
-.B display_name = \(aqDistance\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B units = [<class \(aqunits.distance.Foot\(aq>, <class \(aqunits.distance.Inch\(aq>, <class \(aqunits.distance.Meter\(aq>, <class \(aqunits.distance.Mile\(aq>, <class \(aqunits.distance.Yard\(aq>]
-.UNINDENT
+.B units.utils.fraction_to_str(f, prec=5, auto=True)
+Convert Fraction to str with given precision.
 .UNINDENT
 .INDENT 0.0
 .TP
-.B class units.distance.Foot(value: typing.Any, is_absolute=False)
-Bases: \fI\%units.core.Unit\fP
-.INDENT 7.0
-.TP
-.B display_name = \(aqFoot\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B classmethod from_absolute_value(value: fractions.Fraction)
-.UNINDENT
-.INDENT 7.0
-.TP
-.B short_name = \(aqft\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B classmethod to_absolute_value(value: fractions.Fraction)
-.UNINDENT
-.INDENT 7.0
-.TP
-.B value_type
-alias of \fI\%Distance\fP
-.UNINDENT
-.UNINDENT
-.INDENT 0.0
-.TP
-.B class units.distance.Inch(value: typing.Any, is_absolute=False)
-Bases: \fI\%units.core.Unit\fP
-.INDENT 7.0
-.TP
-.B display_name = \(aqInch\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B classmethod from_absolute_value(value: fractions.Fraction)
-.UNINDENT
-.INDENT 7.0
-.TP
-.B short_name = \(aqin\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B classmethod to_absolute_value(value: fractions.Fraction)
-.UNINDENT
-.INDENT 7.0
-.TP
-.B value_type
-alias of \fI\%Distance\fP
-.UNINDENT
-.UNINDENT
-.INDENT 0.0
-.TP
-.B class units.distance.Meter(value: typing.Any, is_absolute=False)
-Bases: \fI\%units.core.Unit\fP
-.INDENT 7.0
-.TP
-.B display_name = \(aqMeter\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B short_name = \(aqm\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B value_type
-alias of \fI\%Distance\fP
-.UNINDENT
-.UNINDENT
-.INDENT 0.0
-.TP
-.B class units.distance.Mile(value: typing.Any, is_absolute=False)
-Bases: \fI\%units.core.Unit\fP
-.INDENT 7.0
-.TP
-.B display_name = \(aqMile\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B classmethod from_absolute_value(value: fractions.Fraction)
-.UNINDENT
-.INDENT 7.0
-.TP
-.B short_name = \(aqmi\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B classmethod to_absolute_value(value: fractions.Fraction)
-.UNINDENT
-.INDENT 7.0
-.TP
-.B value_type
-alias of \fI\%Distance\fP
-.UNINDENT
-.UNINDENT
-.INDENT 0.0
-.TP
-.B class units.distance.Yard(value: typing.Any, is_absolute=False)
-Bases: \fI\%units.core.Unit\fP
-.INDENT 7.0
-.TP
-.B display_name = \(aqYard\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B classmethod from_absolute_value(value: fractions.Fraction)
-.UNINDENT
-.INDENT 7.0
-.TP
-.B short_name = \(aqyd\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
-.B classmethod to_absolute_value(value: fractions.Fraction)
-.UNINDENT
-.INDENT 7.0
-.TP
-.B value_type
-alias of \fI\%Distance\fP
-.UNINDENT
+.B units.utils.get_all_subclasses(cls)
+Get all subclasses of given class.
 .UNINDENT
 .SS units.prefix module
+.sp
+Module containing Unit subclasses associated with SI prefixes.
 .INDENT 0.0
 .TP
 .B class units.prefix.Atto(value: typing.Any, is_absolute=False)
@@ -621,7 +537,9 @@ Bases: \fI\%units.prefix.Prefix\fP
 .INDENT 0.0
 .TP
 .B class units.prefix.Prefix(value: typing.Any, is_absolute=False)
-Bases: \fI\%units.core.ScaleUnit\fP
+Bases: \fBunits.core.ScaleUnit\fP
+.sp
+Base class for all classes representing SI prefixes
 .UNINDENT
 .INDENT 0.0
 .TP
@@ -675,10 +593,12 @@ Bases: \fI\%units.prefix.Prefix\fP
 .UNINDENT
 .UNINDENT
 .SS units.temperature module
+.sp
+Module containing ValueType and Unit subclasses associated with temperature.
 .INDENT 0.0
 .TP
 .B class units.temperature.Celsius(value: typing.Any, is_absolute=False)
-Bases: \fI\%units.core.Unit\fP
+Bases: \fBunits.core.Unit\fP
 .INDENT 7.0
 .TP
 .B display_name = \(aqCelsius\(aq
@@ -704,7 +624,7 @@ alias of \fI\%Temperature\fP
 .INDENT 0.0
 .TP
 .B class units.temperature.Fahrenheit(value: typing.Any, is_absolute=False)
-Bases: \fI\%units.core.Unit\fP
+Bases: \fBunits.core.Unit\fP
 .INDENT 7.0
 .TP
 .B display_name = \(aqFahrenheit\(aq
@@ -730,7 +650,7 @@ alias of \fI\%Temperature\fP
 .INDENT 0.0
 .TP
 .B class units.temperature.Kelvin(value: typing.Any, is_absolute=False)
-Bases: \fI\%units.core.Unit\fP
+Bases: \fBunits.core.Unit\fP
 .INDENT 7.0
 .TP
 .B display_name = \(aqKelvin\(aq
@@ -748,7 +668,7 @@ alias of \fI\%Temperature\fP
 .INDENT 0.0
 .TP
 .B class units.temperature.Temperature
-Bases: \fI\%units.core.ValueType\fP
+Bases: \fBunits.core.ValueType\fP
 .INDENT 7.0
 .TP
 .B display_name = \(aqTemperature\(aq
@@ -758,16 +678,144 @@ Bases: \fI\%units.core.ValueType\fP
 .B units = [<class \(aqunits.temperature.Celsius\(aq>, <class \(aqunits.temperature.Fahrenheit\(aq>, <class \(aqunits.temperature.Kelvin\(aq>]
 .UNINDENT
 .UNINDENT
-.SS units.utils module
+.SS units.distance module
+.sp
+Module containing ValueType and Unit subclasses associated with distance.
 .INDENT 0.0
 .TP
-.B units.utils.fraction_to_str(f, prec=5, auto=True)
+.B class units.distance.Distance
+Bases: \fBunits.core.ValueType\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqDistance\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B units = [<class \(aqunits.distance.Foot\(aq>, <class \(aqunits.distance.Inch\(aq>, <class \(aqunits.distance.Meter\(aq>, <class \(aqunits.distance.Mile\(aq>, <class \(aqunits.distance.Yard\(aq>]
+.UNINDENT
 .UNINDENT
 .INDENT 0.0
 .TP
-.B units.utils.get_all_subclasses(cls)
+.B class units.distance.Foot(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqFoot\(aq
 .UNINDENT
-.SS Module contents
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqft\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.distance.Inch(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqInch\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqin\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.distance.Meter(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqMeter\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqm\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.distance.Mile(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqMile\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqmi\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.distance.Yard(value: typing.Any, is_absolute=False)
+Bases: \fBunits.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqYard\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqyd\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
 .SH INDICES AND TABLES
 .INDENT 0.0
 .IP \(bu 2

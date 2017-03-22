@@ -1,9 +1,19 @@
+# coding: utf8
+"""
+Module containing all test related code.
+"""
 import unittest
 from units import *
 
 
-class MyTestCase(unittest.TestCase):
+class UnitsTestCase(unittest.TestCase):
+    """
+    Test container for units library. 
+    """
     def test_temperature(self):
+        """
+        Test temperature conversions. 
+        """
         k4 = Kelvin(4)
         self.assertEqual(k4.absolute_value, 4)
         self.assertEqual(k4.convert_to(Kelvin).absolute_value, 4)
@@ -25,6 +35,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(f4.convert_to(Fahrenheit).fraction(), Fraction('4'))
 
     def test_value_type(self):
+        """
+        Test Unit.value_type validation.
+        """
         k4 = Kelvin(4)
         with self.assertRaises(TypeError):
             k4.convert_to(Meter)
@@ -33,6 +46,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(km4.convert_to(Milli(Kelvin(Meter))).fraction(), Fraction('4000'))
 
     def test_prefix(self):
+        """
+        Test Prefix and MultiUnit functionality.
+        """
         k4 = Kelvin(4)
         self.assertEqual(k4.convert_to(Milli(Kelvin)).absolute_value, Fraction('4'))
         self.assertEqual(k4.convert_to(Milli(Kelvin)).fraction(), Fraction('4000'))
@@ -48,6 +64,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(km4k.convert_to(Milli(Celsius)).fraction(), Fraction('-269150'))
 
     def test_f2s(self):
+        """
+        Test Fraction to str conversion.
+        """
         self.assertEqual(fraction_to_str(Fraction('0'), -2), '0')
         self.assertEqual(fraction_to_str(Fraction('0'), -1), '0')
         self.assertEqual(fraction_to_str(Fraction('0'), 0), '0')
@@ -63,9 +82,6 @@ class MyTestCase(unittest.TestCase):
 
         self.assertEqual(fraction_to_str(Fraction('10/3'), 10), '3.3333333333')
         self.assertEqual(fraction_to_str(Fraction('123456789/987654321098765432109876543210'), 50), '0.00000000000000000000012499999884843750012814453124')
-
-
-
 
 
 if __name__ == '__main__':

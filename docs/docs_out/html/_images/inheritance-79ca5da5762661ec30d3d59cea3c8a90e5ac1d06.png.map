@@ -1,0 +1,8 @@
+<map id="inheritance3b42b01ee4" name="inheritance3b42b01ee4">
+<area shape="rect" id="node1" href="units.core.html#units.core.Unit" target="_top" title="units.core.Unit" alt="" coords="24,104,131,129"/>
+<area shape="rect" id="node3" href="#units.temperature.Celsius" target="_top" title="units.temperature.Celsius" alt="" coords="211,55,382,80"/>
+<area shape="rect" id="node4" href="#units.temperature.Fahrenheit" target="_top" title="units.temperature.Fahrenheit" alt="" coords="203,104,391,129"/>
+<area shape="rect" id="node5" href="#units.temperature.Kelvin" target="_top" title="units.temperature.Kelvin" alt="" coords="216,153,377,179"/>
+<area shape="rect" id="node2" href="units.core.html#units.core.ValueType" target="_top" title="units.core.ValueType" alt="" coords="5,5,149,31"/>
+<area shape="rect" id="node6" href="#units.temperature.Temperature" target="_top" title="units.temperature.Temperature" alt="" coords="197,5,396,31"/>
+</map>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>test &#8212; converter 0.0.post0.dev11+n54ce49d.dirty documentation</title>
+    <title>test &#8212; converter 0.0.post0.dev12+n7834dd9.dirty documentation</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.0.post0.dev11+n54ce49d.dirty',
+        VERSION:     '0.0.post0.dev12+n7834dd9.dirty',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -42,12 +42,22 @@
           <div class="body" role="main">
             
   <h1>Source code for test</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">unittest</span>
+<span></span><span class="c1"># coding: utf8</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module containing all test related code.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
 <span class="kn">from</span> <span class="nn">units</span> <span class="k">import</span> <span class="o">*</span>
 
 
-<div class="viewcode-block" id="MyTestCase"><a class="viewcode-back" href="../api/test.html#test.MyTestCase">[docs]</a><span class="k">class</span> <span class="nc">MyTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-<div class="viewcode-block" id="MyTestCase.test_temperature"><a class="viewcode-back" href="../api/test.html#test.MyTestCase.test_temperature">[docs]</a>    <span class="k">def</span> <span class="nf">test_temperature</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UnitsTestCase"><a class="viewcode-back" href="../api/test.html#test.UnitsTestCase">[docs]</a><span class="k">class</span> <span class="nc">UnitsTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test container for units library. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="UnitsTestCase.test_temperature"><a class="viewcode-back" href="../api/test.html#test.UnitsTestCase.test_temperature">[docs]</a>    <span class="k">def</span> <span class="nf">test_temperature</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test temperature conversions. </span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">k4</span> <span class="o">=</span> <span class="n">Kelvin</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">k4</span><span class="o">.</span><span class="n">absolute_value</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">k4</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Kelvin</span><span class="p">)</span><span class="o">.</span><span class="n">absolute_value</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
@@ -68,7 +78,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">f4</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Celsius</span><span class="p">)</span><span class="o">.</span><span class="n">fraction</span><span class="p">(),</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;-140/9&#39;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">f4</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Fahrenheit</span><span class="p">)</span><span class="o">.</span><span class="n">fraction</span><span class="p">(),</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="MyTestCase.test_value_type"><a class="viewcode-back" href="../api/test.html#test.MyTestCase.test_value_type">[docs]</a>    <span class="k">def</span> <span class="nf">test_value_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UnitsTestCase.test_value_type"><a class="viewcode-back" href="../api/test.html#test.UnitsTestCase.test_value_type">[docs]</a>    <span class="k">def</span> <span class="nf">test_value_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test Unit.value_type validation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">k4</span> <span class="o">=</span> <span class="n">Kelvin</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
             <span class="n">k4</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Meter</span><span class="p">)</span>
@@ -76,7 +89,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">km4</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Kelvin</span><span class="p">(</span><span class="n">Meter</span><span class="p">))</span><span class="o">.</span><span class="n">fraction</span><span class="p">(),</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">km4</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Milli</span><span class="p">(</span><span class="n">Kelvin</span><span class="p">(</span><span class="n">Meter</span><span class="p">)))</span><span class="o">.</span><span class="n">fraction</span><span class="p">(),</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;4000&#39;</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="MyTestCase.test_prefix"><a class="viewcode-back" href="../api/test.html#test.MyTestCase.test_prefix">[docs]</a>    <span class="k">def</span> <span class="nf">test_prefix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UnitsTestCase.test_prefix"><a class="viewcode-back" href="../api/test.html#test.UnitsTestCase.test_prefix">[docs]</a>    <span class="k">def</span> <span class="nf">test_prefix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test Prefix and MultiUnit functionality.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">k4</span> <span class="o">=</span> <span class="n">Kelvin</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">k4</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Milli</span><span class="p">(</span><span class="n">Kelvin</span><span class="p">))</span><span class="o">.</span><span class="n">absolute_value</span><span class="p">,</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">k4</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Milli</span><span class="p">(</span><span class="n">Kelvin</span><span class="p">))</span><span class="o">.</span><span class="n">fraction</span><span class="p">(),</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;4000&#39;</span><span class="p">))</span>
@@ -91,7 +107,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">km4k</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Milli</span><span class="p">(</span><span class="n">Kelvin</span><span class="p">))</span><span class="o">.</span><span class="n">fraction</span><span class="p">(),</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;4000&#39;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">km4k</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="n">Milli</span><span class="p">(</span><span class="n">Celsius</span><span class="p">))</span><span class="o">.</span><span class="n">fraction</span><span class="p">(),</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;-269150&#39;</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="MyTestCase.test_f2s"><a class="viewcode-back" href="../api/test.html#test.MyTestCase.test_f2s">[docs]</a>    <span class="k">def</span> <span class="nf">test_f2s</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UnitsTestCase.test_f2s"><a class="viewcode-back" href="../api/test.html#test.UnitsTestCase.test_f2s">[docs]</a>    <span class="k">def</span> <span class="nf">test_f2s</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test Fraction to str conversion.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fraction_to_str</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">),</span> <span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fraction_to_str</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fraction_to_str</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">),</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
@@ -107,9 +126,6 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fraction_to_str</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;10/3&#39;</span><span class="p">),</span> <span class="mi">10</span><span class="p">),</span> <span class="s1">&#39;3.3333333333&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fraction_to_str</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;123456789/987654321098765432109876543210&#39;</span><span class="p">),</span> <span class="mi">50</span><span class="p">),</span> <span class="s1">&#39;0.00000000000000000000012499999884843750012814453124&#39;</span><span class="p">)</span></div></div>
-
-
-
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>

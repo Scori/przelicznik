@@ -1,0 +1,23 @@
+<map id="inheritance41253a2ec1" name="inheritance41253a2ec1">
+<area shape="rect" id="node1" href="api/units.html#units.core.ScaleUnit" target="_top" title="units.core.ScaleUnit" alt="" coords="197,400,336,425"/>
+<area shape="rect" id="node5" href="api/units.html#units.prefix.Prefix" target="_top" title="units.prefix.Prefix" alt="" coords="384,400,507,425"/>
+<area shape="rect" id="node2" href="api/units.html#units.core.Unit" target="_top" title="units.core.Unit" alt="" coords="24,400,131,425"/>
+<area shape="rect" id="node3" href="api/units.html#units.core.ValueType" target="_top" title="units.core.ValueType" alt="" coords="5,351,149,376"/>
+<area shape="rect" id="node4" href="api/units.html#units.prefix.Atto" target="_top" title="units.prefix.Atto" alt="" coords="561,5,675,31"/>
+<area shape="rect" id="node6" href="api/units.html#units.prefix.Eksa" target="_top" title="units.prefix.Eksa" alt="" coords="559,55,677,80"/>
+<area shape="rect" id="node7" href="api/units.html#units.prefix.Femto" target="_top" title="units.prefix.Femto" alt="" coords="555,104,681,129"/>
+<area shape="rect" id="node8" href="api/units.html#units.prefix.Giga" target="_top" title="units.prefix.Giga" alt="" coords="560,153,676,179"/>
+<area shape="rect" id="node9" href="api/units.html#units.prefix.Jokto" target="_top" title="units.prefix.Jokto" alt="" coords="558,203,678,228"/>
+<area shape="rect" id="node10" href="api/units.html#units.prefix.Jotta" target="_top" title="units.prefix.Jotta" alt="" coords="559,252,677,277"/>
+<area shape="rect" id="node11" href="api/units.html#units.prefix.Kilo" target="_top" title="units.prefix.Kilo" alt="" coords="563,301,673,327"/>
+<area shape="rect" id="node12" href="api/units.html#units.prefix.Mega" target="_top" title="units.prefix.Mega" alt="" coords="557,351,679,376"/>
+<area shape="rect" id="node13" href="api/units.html#units.prefix.Micro" target="_top" title="units.prefix.Micro" alt="" coords="557,400,679,425"/>
+<area shape="rect" id="node14" href="api/units.html#units.prefix.Milli" target="_top" title="units.prefix.Milli" alt="" coords="562,449,674,475"/>
+<area shape="rect" id="node15" href="api/units.html#units.prefix.Nano" target="_top" title="units.prefix.Nano" alt="" coords="559,499,677,524"/>
+<area shape="rect" id="node16" href="api/units.html#units.prefix.One" target="_top" title="units.prefix.One" alt="" coords="561,548,675,573"/>
+<area shape="rect" id="node17" href="api/units.html#units.prefix.Peta" target="_top" title="units.prefix.Peta" alt="" coords="560,597,676,623"/>
+<area shape="rect" id="node18" href="api/units.html#units.prefix.Pico" target="_top" title="units.prefix.Pico" alt="" coords="561,647,675,672"/>
+<area shape="rect" id="node19" href="api/units.html#units.prefix.Tera" target="_top" title="units.prefix.Tera" alt="" coords="561,696,675,721"/>
+<area shape="rect" id="node20" href="api/units.html#units.prefix.Zepto" target="_top" title="units.prefix.Zepto" alt="" coords="557,745,679,771"/>
+<area shape="rect" id="node21" href="api/units.html#units.prefix.Zetta" target="_top" title="units.prefix.Zetta" alt="" coords="559,795,677,820"/>
+</map>

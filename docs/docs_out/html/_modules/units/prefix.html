@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>units.prefix &#8212; converter 0.0.post0.dev11+n54ce49d.dirty documentation</title>
+    <title>units.prefix &#8212; converter 0.0.post0.dev12+n7834dd9.dirty documentation</title>
     
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.0.post0.dev11+n54ce49d.dirty',
+        VERSION:     '0.0.post0.dev12+n7834dd9.dirty',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -43,111 +43,116 @@
             
   <h1>Source code for units.prefix</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf8</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module containing Unit subclasses associated with SI prefixes.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">from</span> <span class="nn">fractions</span> <span class="k">import</span> <span class="n">Fraction</span>
 <span class="kn">from</span> <span class="nn">.core</span> <span class="k">import</span> <span class="n">ScaleUnit</span>
 
 
-<div class="viewcode-block" id="Prefix"><a class="viewcode-back" href="../../api/units.html#units.prefix.Prefix">[docs]</a><span class="k">class</span> <span class="nc">Prefix</span><span class="p">(</span><span class="n">ScaleUnit</span><span class="p">):</span>
-    <span class="k">pass</span></div>
+<div class="viewcode-block" id="Prefix"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Prefix">[docs]</a><span class="k">class</span> <span class="nc">Prefix</span><span class="p">(</span><span class="n">ScaleUnit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Base class for all classes representing SI prefixes</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="Jotta"><a class="viewcode-back" href="../../api/units.html#units.prefix.Jotta">[docs]</a><span class="k">class</span> <span class="nc">Jotta</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Jotta"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Jotta">[docs]</a><span class="k">class</span> <span class="nc">Jotta</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Jotta&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">8</span></div>
 
 
-<div class="viewcode-block" id="Zetta"><a class="viewcode-back" href="../../api/units.html#units.prefix.Zetta">[docs]</a><span class="k">class</span> <span class="nc">Zetta</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Zetta"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Zetta">[docs]</a><span class="k">class</span> <span class="nc">Zetta</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Zetta&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;Z&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">7</span></div>
 
 
-<div class="viewcode-block" id="Eksa"><a class="viewcode-back" href="../../api/units.html#units.prefix.Eksa">[docs]</a><span class="k">class</span> <span class="nc">Eksa</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Eksa"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Eksa">[docs]</a><span class="k">class</span> <span class="nc">Eksa</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Tera&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;T&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">6</span></div>
 
 
-<div class="viewcode-block" id="Peta"><a class="viewcode-back" href="../../api/units.html#units.prefix.Peta">[docs]</a><span class="k">class</span> <span class="nc">Peta</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Peta"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Peta">[docs]</a><span class="k">class</span> <span class="nc">Peta</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Peta&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;P&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">5</span></div>
 
 
-<div class="viewcode-block" id="Tera"><a class="viewcode-back" href="../../api/units.html#units.prefix.Tera">[docs]</a><span class="k">class</span> <span class="nc">Tera</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Tera"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Tera">[docs]</a><span class="k">class</span> <span class="nc">Tera</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Tera&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;T&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span></div>
 
 
-<div class="viewcode-block" id="Giga"><a class="viewcode-back" href="../../api/units.html#units.prefix.Giga">[docs]</a><span class="k">class</span> <span class="nc">Giga</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Giga"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Giga">[docs]</a><span class="k">class</span> <span class="nc">Giga</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Giga&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;G&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span></div>
 
 
-<div class="viewcode-block" id="Mega"><a class="viewcode-back" href="../../api/units.html#units.prefix.Mega">[docs]</a><span class="k">class</span> <span class="nc">Mega</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Mega"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Mega">[docs]</a><span class="k">class</span> <span class="nc">Mega</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Mega&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;M&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span></div>
 
 
-<div class="viewcode-block" id="Kilo"><a class="viewcode-back" href="../../api/units.html#units.prefix.Kilo">[docs]</a><span class="k">class</span> <span class="nc">Kilo</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Kilo"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Kilo">[docs]</a><span class="k">class</span> <span class="nc">Kilo</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Kilo&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">1</span></div>
 
 
-<div class="viewcode-block" id="One"><a class="viewcode-back" href="../../api/units.html#units.prefix.One">[docs]</a><span class="k">class</span> <span class="nc">One</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="One"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.One">[docs]</a><span class="k">class</span> <span class="nc">One</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">0</span></div>
 
 
-<div class="viewcode-block" id="Milli"><a class="viewcode-back" href="../../api/units.html#units.prefix.Milli">[docs]</a><span class="k">class</span> <span class="nc">Milli</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Milli"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Milli">[docs]</a><span class="k">class</span> <span class="nc">Milli</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Milli&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;m&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**-</span><span class="mi">1</span></div>
 
 
-<div class="viewcode-block" id="Micro"><a class="viewcode-back" href="../../api/units.html#units.prefix.Micro">[docs]</a><span class="k">class</span> <span class="nc">Micro</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Micro"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Micro">[docs]</a><span class="k">class</span> <span class="nc">Micro</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Micro&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;μ&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**-</span><span class="mi">2</span></div>
 
 
-<div class="viewcode-block" id="Nano"><a class="viewcode-back" href="../../api/units.html#units.prefix.Nano">[docs]</a><span class="k">class</span> <span class="nc">Nano</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Nano"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Nano">[docs]</a><span class="k">class</span> <span class="nc">Nano</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Nano&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;n&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**-</span><span class="mi">3</span></div>
 
 
-<div class="viewcode-block" id="Pico"><a class="viewcode-back" href="../../api/units.html#units.prefix.Pico">[docs]</a><span class="k">class</span> <span class="nc">Pico</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Pico"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Pico">[docs]</a><span class="k">class</span> <span class="nc">Pico</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Pico&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;p&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**-</span><span class="mi">4</span></div>
 
 
-<div class="viewcode-block" id="Femto"><a class="viewcode-back" href="../../api/units.html#units.prefix.Femto">[docs]</a><span class="k">class</span> <span class="nc">Femto</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Femto"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Femto">[docs]</a><span class="k">class</span> <span class="nc">Femto</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Femto&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;f&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**-</span><span class="mi">5</span></div>
 
 
-<div class="viewcode-block" id="Atto"><a class="viewcode-back" href="../../api/units.html#units.prefix.Atto">[docs]</a><span class="k">class</span> <span class="nc">Atto</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Atto"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Atto">[docs]</a><span class="k">class</span> <span class="nc">Atto</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Atto&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**-</span><span class="mi">6</span></div>
 
 
-<div class="viewcode-block" id="Zepto"><a class="viewcode-back" href="../../api/units.html#units.prefix.Zepto">[docs]</a><span class="k">class</span> <span class="nc">Zepto</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Zepto"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Zepto">[docs]</a><span class="k">class</span> <span class="nc">Zepto</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Zepto&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**-</span><span class="mi">7</span></div>
 
 
-<div class="viewcode-block" id="Jokto"><a class="viewcode-back" href="../../api/units.html#units.prefix.Jokto">[docs]</a><span class="k">class</span> <span class="nc">Jokto</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
+<div class="viewcode-block" id="Jokto"><a class="viewcode-back" href="../../api/units.prefix.html#units.prefix.Jokto">[docs]</a><span class="k">class</span> <span class="nc">Jokto</span><span class="p">(</span><span class="n">Prefix</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Jokto&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;j&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span><span class="o">**-</span><span class="mi">8</span></div>

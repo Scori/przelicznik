@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>gui module &#8212; converter 0.0.post0.dev11+n54ce49d.dirty documentation</title>
+    <title>gui module &#8212; converter 0.0.post0.dev12+n7834dd9.dirty documentation</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.0.post0.dev11+n54ce49d.dirty',
+        VERSION:     '0.0.post0.dev12+n7834dd9.dirty',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -43,48 +43,68 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gui">
-<span id="gui-module"></span><h1>gui module<a class="headerlink" href="#module-gui" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="gui-module">
+<h1>gui module<a class="headerlink" href="#gui-module" title="Permalink to this headline">¶</a></h1>
+<img src="../_images/inheritance-cb78b0535243f0c7e6f97ae11649a890abd86ce8.png" alt="Inheritance diagram of gui" usemap="#inheritancea0d65241b0" class="inheritance"/>
+<map id="inheritancea0d65241b0" name="inheritancea0d65241b0">
+<area shape="rect" id="node1" href="#gui.Application" target="_top" title="Main GUI class. Creates widgets, handles data input and delegates unit conversion to *units* library." alt="" coords="623,80,729,105"/>
+<area shape="rect" id="node2" title="Frame widget which may contain other widgets and can have a 3D border." alt="" coords="476,80,575,105"/>
+<area shape="rect" id="node3" title="Internal class." alt="" coords="144,5,277,31"/>
+<area shape="rect" id="node5" title="Internal class." alt="" coords="325,80,428,105"/>
+<area shape="rect" id="node4" title="Internal class." alt="" coords="5,5,96,31"/>
+<area shape="rect" id="node6" title="Geometry manager Grid." alt="" coords="167,55,254,80"/>
+<area shape="rect" id="node7" title="Geometry manager Pack." alt="" coords="165,104,257,129"/>
+<area shape="rect" id="node8" title="Geometry manager Place." alt="" coords="163,153,258,179"/>
+</map>
+<span class="target" id="module-gui"></span><p>Module containing all GUI related code.</p>
 <dl class="class">
 <dt id="gui.Application">
 <em class="property">class </em><code class="descclassname">gui.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>master=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#Application"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tkinter.Frame</span></code></p>
+<p>Main GUI class. Creates widgets, handles data input and delegates unit conversion to <em>units</em> library.</p>
 <dl class="method">
 <dt id="gui.Application.on_change_data">
 <code class="descname">on_change_data</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#Application.on_change_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application.on_change_data" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Selected units, prefixes and input data change handler. Performs unit conversion.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="gui.Application.on_change_type">
 <code class="descname">on_change_type</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#Application.on_change_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application.on_change_type" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Selected variable type change handler.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="gui.Application.on_switch">
 <code class="descname">on_switch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#Application.on_switch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application.on_switch" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Unit switch button handler.</p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="gui.main">
 <code class="descclassname">gui.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.main" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Application main function.</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="gui.pull_down_menu">
 <code class="descclassname">gui.</code><code class="descname">pull_down_menu</code><span class="sig-paren">(</span><em>master</em>, <em>options</em>, <em>default=None</em>, <em>callback=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#pull_down_menu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.pull_down_menu" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Utility function for creating tkinter.OptionMenu widgets.</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="gui.textvariable">
 <code class="descclassname">gui.</code><code class="descname">textvariable</code><span class="sig-paren">(</span><em>master</em>, <em>default=''</em>, <em>callback=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#textvariable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.textvariable" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Utility function for creating and binding tkinter.StringVar objects.</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="gui.update_pdm">
 <code class="descclassname">gui.</code><code class="descname">update_pdm</code><span class="sig-paren">(</span><em>pdm</em>, <em>options</em>, <em>default=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#update_pdm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.update_pdm" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Utility function for updating options of tkinter.OptionMenu widget.</p>
+</dd></dl>
 
 </div>
 

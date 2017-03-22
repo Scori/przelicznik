@@ -1,10 +1,15 @@
 # coding: utf8
+"""
+Module containing Unit subclasses associated with SI prefixes.
+"""
 from fractions import Fraction
 from .core import ScaleUnit
 
 
 class Prefix(ScaleUnit):
-    pass
+    """
+    Base class for all classes representing SI prefixes
+    """
 
 
 class Jotta(Prefix):

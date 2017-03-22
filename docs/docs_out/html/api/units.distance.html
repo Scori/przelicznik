@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>units.distance module &#8212; converter 0.0.post0.dev12+n7834dd9.dirty documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.post0.dev12+n7834dd9.dirty',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="units.temperature module" href="units.temperature.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="units-distance-module">
+<h1>units.distance module<a class="headerlink" href="#units-distance-module" title="Permalink to this headline">¶</a></h1>
+<img src="../_images/inheritance-4b0fc58080cdb871e0e50ea75347e155fbb6df5c.png" alt="Inheritance diagram of units.distance" usemap="#inheritance8d3ffdbe56" class="inheritance"/>
+<map id="inheritance8d3ffdbe56" name="inheritance8d3ffdbe56">
+<area shape="rect" id="node1" href="units.core.html#units.core.Unit" target="_top" title="Class representing unit of given *value_type*. Instances of this class represent not only unit but also its value." alt="" coords="24,153,131,179"/>
+<area shape="rect" id="node4" href="#units.distance.Foot" target="_top" title="units.distance.Foot" alt="" coords="210,55,343,80"/>
+<area shape="rect" id="node5" href="#units.distance.Inch" target="_top" title="units.distance.Inch" alt="" coords="211,104,342,129"/>
+<area shape="rect" id="node6" href="#units.distance.Meter" target="_top" title="units.distance.Meter" alt="" coords="207,153,347,179"/>
+<area shape="rect" id="node7" href="#units.distance.Mile" target="_top" title="units.distance.Mile" alt="" coords="211,203,342,228"/>
+<area shape="rect" id="node8" href="#units.distance.Yard" target="_top" title="units.distance.Yard" alt="" coords="209,252,344,277"/>
+<area shape="rect" id="node2" href="units.core.html#units.core.ValueType" target="_top" title="Abstract class representing type of value." alt="" coords="5,5,149,31"/>
+<area shape="rect" id="node3" href="#units.distance.Distance" target="_top" title="units.distance.Distance" alt="" coords="197,5,356,31"/>
+</map>
+<span class="target" id="module-units.distance"></span><p>Module containing ValueType and Unit subclasses associated with distance.</p>
+<dl class="class">
+<dt id="units.distance.Distance">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Distance</code><a class="reference internal" href="../_modules/units/distance.html#Distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.ValueType" title="units.core.ValueType"><code class="xref py py-class docutils literal"><span class="pre">units.core.ValueType</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Distance.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Distance'</em><a class="headerlink" href="#units.distance.Distance.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Distance.units">
+<code class="descname">units</code><em class="property"> = [&lt;class 'units.distance.Foot'&gt;, &lt;class 'units.distance.Inch'&gt;, &lt;class 'units.distance.Meter'&gt;, &lt;class 'units.distance.Mile'&gt;, &lt;class 'units.distance.Yard'&gt;]</em><a class="headerlink" href="#units.distance.Distance.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Foot">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Foot</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Foot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Foot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Foot.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Foot'</em><a class="headerlink" href="#units.distance.Foot.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Foot.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Foot.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Foot.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Foot.short_name">
+<code class="descname">short_name</code><em class="property"> = 'ft'</em><a class="headerlink" href="#units.distance.Foot.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Foot.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Foot.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Foot.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Foot.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Foot.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Inch">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Inch</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Inch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Inch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Inch.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Inch'</em><a class="headerlink" href="#units.distance.Inch.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Inch.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Inch.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Inch.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Inch.short_name">
+<code class="descname">short_name</code><em class="property"> = 'in'</em><a class="headerlink" href="#units.distance.Inch.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Inch.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Inch.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Inch.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Inch.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Inch.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Meter">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Meter</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Meter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Meter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Meter.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Meter'</em><a class="headerlink" href="#units.distance.Meter.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Meter.short_name">
+<code class="descname">short_name</code><em class="property"> = 'm'</em><a class="headerlink" href="#units.distance.Meter.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Meter.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Meter.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Mile">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Mile</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Mile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Mile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Mile.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Mile'</em><a class="headerlink" href="#units.distance.Mile.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Mile.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Mile.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Mile.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Mile.short_name">
+<code class="descname">short_name</code><em class="property"> = 'mi'</em><a class="headerlink" href="#units.distance.Mile.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Mile.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Mile.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Mile.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Mile.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Mile.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Yard">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Yard</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Yard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Yard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Yard.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Yard'</em><a class="headerlink" href="#units.distance.Yard.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Yard.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Yard.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Yard.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Yard.short_name">
+<code class="descname">short_name</code><em class="property"> = 'yd'</em><a class="headerlink" href="#units.distance.Yard.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Yard.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Yard.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Yard.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Yard.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Yard.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Modules</a><ul>
+      <li>Previous: <a href="units.temperature.html" title="previous chapter">units.temperature module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/units.distance.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Sim1234.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/api/units.distance.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

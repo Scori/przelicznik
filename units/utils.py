@@ -1,16 +1,24 @@
-import math
-from fractions import Fraction
-
+# coding: utf8
+"""
+Module containing internal utility functions.
+"""
 import collections
+from fractions import Fraction
 
 
 def get_all_subclasses(cls):
+    """
+    Get all subclasses of given class. 
+    """
     for subclass in cls.__subclasses__():
         yield subclass
         yield from get_all_subclasses(subclass)
 
 
 def fraction_to_str(f, prec=5, auto=True):
+    """
+    Convert Fraction to str with given precision. 
+    """
     r = collections.deque()
     if f < 0:
         r.append('-')
@@ -37,8 +45,3 @@ def fraction_to_str(f, prec=5, auto=True):
         if f == 0 and auto:
             break
     return ''.join(r)
-
-
-
-
-

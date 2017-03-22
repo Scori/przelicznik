@@ -1,6 +1,7 @@
 # coding: utf8
-from fractions import Fraction
-import typing
+"""
+Package providing unit conversion functionality.
+"""
 from .core import *
 from .utils import *
 from .prefix import *

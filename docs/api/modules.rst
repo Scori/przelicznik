@@ -7,3 +7,8 @@ Modules
    gui
    test
    units
+   units.core
+   units.utils
+   units.prefix
+   units.temperature
+   units.distance

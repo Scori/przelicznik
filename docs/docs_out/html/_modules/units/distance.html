@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>units.distance &#8212; converter 0.0.post0.dev11+n54ce49d.dirty documentation</title>
+    <title>units.distance &#8212; converter 0.0.post0.dev12+n7834dd9.dirty documentation</title>
     
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.0.post0.dev11+n54ce49d.dirty',
+        VERSION:     '0.0.post0.dev12+n7834dd9.dirty',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -43,74 +43,77 @@
             
   <h1>Source code for units.distance</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf8</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module containing ValueType and Unit subclasses associated with distance.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">from</span> <span class="nn">fractions</span> <span class="k">import</span> <span class="n">Fraction</span>
 <span class="kn">import</span> <span class="nn">typing</span>
 <span class="kn">from</span> <span class="nn">.core</span> <span class="k">import</span> <span class="n">ValueType</span><span class="p">,</span> <span class="n">Unit</span>
 
 
-<div class="viewcode-block" id="Distance"><a class="viewcode-back" href="../../api/units.html#units.distance.Distance">[docs]</a><span class="k">class</span> <span class="nc">Distance</span><span class="p">(</span><span class="n">ValueType</span><span class="p">):</span>
+<div class="viewcode-block" id="Distance"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Distance">[docs]</a><span class="k">class</span> <span class="nc">Distance</span><span class="p">(</span><span class="n">ValueType</span><span class="p">):</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;Distance&#39;</span></div>
 
 
-<div class="viewcode-block" id="Meter"><a class="viewcode-back" href="../../api/units.html#units.distance.Meter">[docs]</a><span class="k">class</span> <span class="nc">Meter</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
+<div class="viewcode-block" id="Meter"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Meter">[docs]</a><span class="k">class</span> <span class="nc">Meter</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
     <span class="n">value_type</span> <span class="o">=</span> <span class="n">Distance</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;Meter&quot;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;m&quot;</span></div>
 
 
-<div class="viewcode-block" id="Inch"><a class="viewcode-back" href="../../api/units.html#units.distance.Inch">[docs]</a><span class="k">class</span> <span class="nc">Inch</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
+<div class="viewcode-block" id="Inch"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Inch">[docs]</a><span class="k">class</span> <span class="nc">Inch</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
     <span class="n">value_type</span> <span class="o">=</span> <span class="n">Distance</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;Inch&quot;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;in&quot;</span>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Inch.from_absolute_value"><a class="viewcode-back" href="../../api/units.html#units.distance.Inch.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
+<div class="viewcode-block" id="Inch.from_absolute_value"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Inch.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">value</span> <span class="o">/</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;0.0254&#39;</span><span class="p">)</span></div>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Inch.to_absolute_value"><a class="viewcode-back" href="../../api/units.html#units.distance.Inch.to_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">to_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
+<div class="viewcode-block" id="Inch.to_absolute_value"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Inch.to_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">to_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;0.0254&#39;</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="Foot"><a class="viewcode-back" href="../../api/units.html#units.distance.Foot">[docs]</a><span class="k">class</span> <span class="nc">Foot</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
+<div class="viewcode-block" id="Foot"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Foot">[docs]</a><span class="k">class</span> <span class="nc">Foot</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
     <span class="n">value_type</span> <span class="o">=</span> <span class="n">Distance</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;Foot&quot;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;ft&quot;</span>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Foot.from_absolute_value"><a class="viewcode-back" href="../../api/units.html#units.distance.Foot.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
+<div class="viewcode-block" id="Foot.from_absolute_value"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Foot.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">value</span> <span class="o">/</span> <span class="n">Fraction</span><span class="p">(</span><span class="s2">&quot;0.3048&quot;</span><span class="p">)</span></div>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Foot.to_absolute_value"><a class="viewcode-back" href="../../api/units.html#units.distance.Foot.to_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">to_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
+<div class="viewcode-block" id="Foot.to_absolute_value"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Foot.to_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">to_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="n">Fraction</span><span class="p">(</span><span class="s2">&quot;0.3048&quot;</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="Yard"><a class="viewcode-back" href="../../api/units.html#units.distance.Yard">[docs]</a><span class="k">class</span> <span class="nc">Yard</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
+<div class="viewcode-block" id="Yard"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Yard">[docs]</a><span class="k">class</span> <span class="nc">Yard</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
     <span class="n">value_type</span> <span class="o">=</span> <span class="n">Distance</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;Yard&quot;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;yd&quot;</span>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Yard.from_absolute_value"><a class="viewcode-back" href="../../api/units.html#units.distance.Yard.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
+<div class="viewcode-block" id="Yard.from_absolute_value"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Yard.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">value</span> <span class="o">/</span> <span class="n">Fraction</span><span class="p">(</span><span class="s2">&quot;0.9144&quot;</span><span class="p">)</span></div>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Yard.to_absolute_value"><a class="viewcode-back" href="../../api/units.html#units.distance.Yard.to_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">to_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
+<div class="viewcode-block" id="Yard.to_absolute_value"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Yard.to_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">to_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="n">Fraction</span><span class="p">(</span><span class="s2">&quot;0.9144&quot;</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="Mile"><a class="viewcode-back" href="../../api/units.html#units.distance.Mile">[docs]</a><span class="k">class</span> <span class="nc">Mile</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
+<div class="viewcode-block" id="Mile"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Mile">[docs]</a><span class="k">class</span> <span class="nc">Mile</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
     <span class="n">value_type</span> <span class="o">=</span> <span class="n">Distance</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;Mile&quot;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;mi&quot;</span>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Mile.from_absolute_value"><a class="viewcode-back" href="../../api/units.html#units.distance.Mile.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
+<div class="viewcode-block" id="Mile.from_absolute_value"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Mile.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">value</span> <span class="o">/</span> <span class="n">Fraction</span><span class="p">(</span><span class="s2">&quot;1609.344&quot;</span><span class="p">)</span></div>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Mile.to_absolute_value"><a class="viewcode-back" href="../../api/units.html#units.distance.Mile.to_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">to_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
+<div class="viewcode-block" id="Mile.to_absolute_value"><a class="viewcode-back" href="../../api/units.distance.html#units.distance.Mile.to_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">to_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="n">Fraction</span><span class="p">(</span><span class="s2">&quot;1609.344&quot;</span><span class="p">)</span></div></div>
 </pre></div>
 

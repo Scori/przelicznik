@@ -1,4 +1,7 @@
 # coding: utf8
+"""
+Module containing ValueType and Unit subclasses associated with distance.
+"""
 from fractions import Fraction
 import typing
 from .core import ValueType, Unit

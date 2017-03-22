@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>units.core module &#8212; converter 0.0.post0.dev12+n7834dd9.dirty documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.post0.dev12+n7834dd9.dirty',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="units.utils module" href="units.utils.html" />
+    <link rel="prev" title="units package" href="units.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="units-core-module">
+<h1>units.core module<a class="headerlink" href="#units-core-module" title="Permalink to this headline">¶</a></h1>
+<img src="../_images/inheritance-d493195c324d2ef8c2ce49ca0519ca8e8e377a06.png" alt="Inheritance diagram of units.core" usemap="#inheritancecb66ddedf6" class="inheritance"/>
+<map id="inheritancecb66ddedf6" name="inheritancecb66ddedf6">
+<area shape="rect" id="node1" href="#units.core.ScaleUnit" target="_top" title="Utility class providing scaling functionality." alt="" coords="197,55,336,80"/>
+<area shape="rect" id="node2" href="#units.core.Unit" target="_top" title="Class representing unit of given *value_type*. Instances of this class represent not only unit but also its value." alt="" coords="24,55,131,80"/>
+<area shape="rect" id="node3" href="#units.core.ValueType" target="_top" title="Abstract class representing type of value." alt="" coords="5,5,149,31"/>
+</map>
+<span class="target" id="module-units.core"></span><p>Core module for units package. Defines base classes like ValueType and Unit and utility class ScaleUnit.</p>
+<dl class="class">
+<dt id="units.core.ScaleUnit">
+<em class="property">class </em><code class="descclassname">units.core.</code><code class="descname">ScaleUnit</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#ScaleUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ScaleUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<p>Utility class providing scaling functionality.</p>
+<dl class="attribute">
+<dt id="units.core.ScaleUnit.display_name">
+<code class="descname">display_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.ScaleUnit.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.ScaleUnit.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#ScaleUnit.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ScaleUnit.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ScaleUnit.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1)</em><a class="headerlink" href="#units.core.ScaleUnit.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ScaleUnit.short_name">
+<code class="descname">short_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.ScaleUnit.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.ScaleUnit.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#ScaleUnit.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ScaleUnit.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ScaleUnit.unit">
+<code class="descname">unit</code><a class="headerlink" href="#units.core.ScaleUnit.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">Unit</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.core.Unit">
+<em class="property">class </em><code class="descclassname">units.core.</code><code class="descname">Unit</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#Unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Class representing unit of given <em>value_type</em>. Instances of this class represent not only unit but also its value.</p>
+<dl class="method">
+<dt id="units.core.Unit.convert_to">
+<code class="descname">convert_to</code><span class="sig-paren">(</span><em>unit: Unit</em><span class="sig-paren">)</span> &#x2192; units.core.Unit<a class="reference internal" href="../_modules/units/core.html#Unit.convert_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.convert_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns new Unit instance representing current value in given <em>unit</em>.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.Unit.create_unit">
+<em class="property">classmethod </em><code class="descname">create_unit</code><span class="sig-paren">(</span><em>units</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#Unit.create_unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.create_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create new Unit subclass representing product of given units.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.Unit.display_name">
+<code class="descname">display_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.Unit.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="units.core.Unit.fraction">
+<code class="descname">fraction</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#Unit.fraction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.fraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get fraction representation of current value.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.Unit.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#Unit.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts from absolute value to value in this unit.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.Unit.short_name">
+<code class="descname">short_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.Unit.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="units.core.Unit.smart_str">
+<code class="descname">smart_str</code><span class="sig-paren">(</span><em>precision=5</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#Unit.smart_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.smart_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get str representation of current value with given <em>precision</em>.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.Unit.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#Unit.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts from value in this unit to absolute value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.Unit.units">
+<code class="descname">units</code><em class="property"> = []</em><a class="headerlink" href="#units.core.Unit.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.Unit.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.core.Unit.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.core.ValueType" title="units.core.ValueType"><code class="xref py py-class docutils literal"><span class="pre">ValueType</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.core.ValueType">
+<em class="property">class </em><code class="descclassname">units.core.</code><code class="descname">ValueType</code><a class="reference internal" href="../_modules/units/core.html#ValueType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ValueType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Abstract class representing type of value.</p>
+<dl class="classmethod">
+<dt id="units.core.ValueType.compatible_with">
+<em class="property">classmethod </em><code class="descname">compatible_with</code><span class="sig-paren">(</span><em>value_type: ValueType</em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="../_modules/units/core.html#ValueType.compatible_with"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ValueType.compatible_with" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if given <em>value_type</em> class is equivalent with <em>self</em>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ValueType.display_name">
+<code class="descname">display_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.ValueType.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.ValueType.get_types">
+<em class="property">classmethod </em><code class="descname">get_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; collections.Counter<a class="reference internal" href="../_modules/units/core.html#ValueType.get_types"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ValueType.get_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Counter object containing all base value type classes - representation of whole type.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ValueType.types">
+<code class="descname">types</code><em class="property"> = Counter()</em><a class="headerlink" href="#units.core.ValueType.types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ValueType.units">
+<code class="descname">units</code><em class="property"> = []</em><a class="headerlink" href="#units.core.ValueType.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Modules</a><ul>
+      <li>Previous: <a href="units.html" title="previous chapter">units package</a></li>
+      <li>Next: <a href="units.utils.html" title="next chapter">units.utils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/units.core.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Sim1234.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/api/units.core.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

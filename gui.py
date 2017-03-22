@@ -1,3 +1,6 @@
+"""
+Module containing all GUI related code.
+"""
 from collections import OrderedDict
 
 import units
@@ -6,6 +9,9 @@ from fractions import Fraction
 
 
 def textvariable(master, default='', callback=None):
+    """
+    Utility function for creating and binding tkinter.StringVar objects.
+    """
     variable = tkinter.StringVar(master)
     variable.set(default)
     if callback:
@@ -14,6 +20,9 @@ def textvariable(master, default='', callback=None):
 
 
 def pull_down_menu(master, options, default=None, callback=None, **kwargs):
+    """
+    Utility function for creating tkinter.OptionMenu widgets.
+    """
     if default is None:
         default = options[0]
     variable = textvariable(master, default, callback)
@@ -23,6 +32,9 @@ def pull_down_menu(master, options, default=None, callback=None, **kwargs):
 
 
 def update_pdm(pdm, options, default=None):
+    """
+    Utility function for updating options of tkinter.OptionMenu widget.
+    """
     if default is None:
         default = options[0]
     pdm['menu'].delete(0, 'end')
@@ -33,7 +45,13 @@ def update_pdm(pdm, options, default=None):
 
 
 class Application(tkinter.Frame):
+    """
+    Main GUI class. Creates widgets, handles data input and delegates unit conversion to *units* library.
+    """
     def __init__(self, master=None):
+        """
+        Create widgets and open application window. 
+        """
         master.title("Converter")
         super(Application, self).__init__(master=master)
         self.value_types = OrderedDict(((t.__name__, t) for t in units.value_types))
@@ -77,6 +95,9 @@ class Application(tkinter.Frame):
         self.on_change_type(self.value_type.textvariable.get())
 
     def on_switch(self):
+        """
+        Unit switch button handler.
+        """
         u_in = self.unit_in.textvariable.get()
         p_in = self.prefix_in.textvariable.get()
         u_out = self.unit_out.textvariable.get()
@@ -93,6 +114,9 @@ class Application(tkinter.Frame):
         self.on_change_data(None)
 
     def on_change_type(self, data):
+        """
+        Selected variable type change handler.
+        """
         update_pdm(self.unit_in, self.units_vt[data])
         update_pdm(self.unit_out, self.units_vt[data])
         self.on_change_data(None)
@@ -101,6 +125,9 @@ class Application(tkinter.Frame):
     #     self.data_in['bg'] = 'red'
 
     def on_change_data(self, *args):
+        """
+        Selected units, prefixes and input data change handler. Performs unit conversion. 
+        """
         try:
             v_in = Fraction(self.data_in.get().replace(',', '.'))
         except ValueError:
@@ -126,6 +153,9 @@ class Application(tkinter.Frame):
 
 
 def main():
+    """
+    Application main function. 
+    """
     root = tkinter.Tk()
     app = Application(master=root)
     app.mainloop()

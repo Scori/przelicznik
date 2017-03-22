@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>units.temperature module &#8212; converter 0.0.post0.dev12+n7834dd9.dirty documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.post0.dev12+n7834dd9.dirty',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="units.distance module" href="units.distance.html" />
+    <link rel="prev" title="units.prefix module" href="units.prefix.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="units-temperature-module">
+<h1>units.temperature module<a class="headerlink" href="#units-temperature-module" title="Permalink to this headline">¶</a></h1>
+<img src="../_images/inheritance-f33c82a5e675a309d287e1b4ad6093cefb55e414.png" alt="Inheritance diagram of units.temperature" usemap="#inheritance3b42b01ee4" class="inheritance"/>
+<map id="inheritance3b42b01ee4" name="inheritance3b42b01ee4">
+<area shape="rect" id="node1" href="units.core.html#units.core.Unit" target="_top" title="Class representing unit of given *value_type*. Instances of this class represent not only unit but also its value." alt="" coords="24,104,131,129"/>
+<area shape="rect" id="node3" href="#units.temperature.Celsius" target="_top" title="units.temperature.Celsius" alt="" coords="211,55,382,80"/>
+<area shape="rect" id="node4" href="#units.temperature.Fahrenheit" target="_top" title="units.temperature.Fahrenheit" alt="" coords="203,104,391,129"/>
+<area shape="rect" id="node5" href="#units.temperature.Kelvin" target="_top" title="units.temperature.Kelvin" alt="" coords="216,153,377,179"/>
+<area shape="rect" id="node2" href="units.core.html#units.core.ValueType" target="_top" title="Abstract class representing type of value." alt="" coords="5,5,149,31"/>
+<area shape="rect" id="node6" href="#units.temperature.Temperature" target="_top" title="units.temperature.Temperature" alt="" coords="197,5,396,31"/>
+</map>
+<span class="target" id="module-units.temperature"></span><p>Module containing ValueType and Unit subclasses associated with temperature.</p>
+<dl class="class">
+<dt id="units.temperature.Celsius">
+<em class="property">class </em><code class="descclassname">units.temperature.</code><code class="descname">Celsius</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Celsius"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Celsius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.temperature.Celsius.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Celsius'</em><a class="headerlink" href="#units.temperature.Celsius.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.temperature.Celsius.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Celsius.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Celsius.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Celsius.short_name">
+<code class="descname">short_name</code><em class="property"> = '°C'</em><a class="headerlink" href="#units.temperature.Celsius.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.temperature.Celsius.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Celsius.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Celsius.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Celsius.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.temperature.Celsius.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.temperature.Temperature" title="units.temperature.Temperature"><code class="xref py py-class docutils literal"><span class="pre">Temperature</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.temperature.Fahrenheit">
+<em class="property">class </em><code class="descclassname">units.temperature.</code><code class="descname">Fahrenheit</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Fahrenheit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Fahrenheit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.temperature.Fahrenheit.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Fahrenheit'</em><a class="headerlink" href="#units.temperature.Fahrenheit.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.temperature.Fahrenheit.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Fahrenheit.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Fahrenheit.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Fahrenheit.short_name">
+<code class="descname">short_name</code><em class="property"> = '°F'</em><a class="headerlink" href="#units.temperature.Fahrenheit.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.temperature.Fahrenheit.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Fahrenheit.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Fahrenheit.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Fahrenheit.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.temperature.Fahrenheit.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.temperature.Temperature" title="units.temperature.Temperature"><code class="xref py py-class docutils literal"><span class="pre">Temperature</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.temperature.Kelvin">
+<em class="property">class </em><code class="descclassname">units.temperature.</code><code class="descname">Kelvin</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Kelvin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Kelvin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.temperature.Kelvin.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Kelvin'</em><a class="headerlink" href="#units.temperature.Kelvin.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Kelvin.short_name">
+<code class="descname">short_name</code><em class="property"> = 'K'</em><a class="headerlink" href="#units.temperature.Kelvin.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Kelvin.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.temperature.Kelvin.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.temperature.Temperature" title="units.temperature.Temperature"><code class="xref py py-class docutils literal"><span class="pre">Temperature</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.temperature.Temperature">
+<em class="property">class </em><code class="descclassname">units.temperature.</code><code class="descname">Temperature</code><a class="reference internal" href="../_modules/units/temperature.html#Temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="units.core.html#units.core.ValueType" title="units.core.ValueType"><code class="xref py py-class docutils literal"><span class="pre">units.core.ValueType</span></code></a></p>
+<dl class="attribute">
+<dt id="units.temperature.Temperature.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Temperature'</em><a class="headerlink" href="#units.temperature.Temperature.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Temperature.units">
+<code class="descname">units</code><em class="property"> = [&lt;class 'units.temperature.Celsius'&gt;, &lt;class 'units.temperature.Fahrenheit'&gt;, &lt;class 'units.temperature.Kelvin'&gt;]</em><a class="headerlink" href="#units.temperature.Temperature.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Modules</a><ul>
+      <li>Previous: <a href="units.prefix.html" title="previous chapter">units.prefix module</a></li>
+      <li>Next: <a href="units.distance.html" title="next chapter">units.distance module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/units.temperature.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Sim1234.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/api/units.temperature.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
