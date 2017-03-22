@@ -1,0 +1,783 @@
+.\" Man page generated from reStructuredText.
+.
+.TH "CONVERTER" "1" "Mar 22, 2017" "0.0.post0.dev11+n54ce49d.dirty" "converter"
+.SH NAME
+converter \- converter 0.0.post0.dev11+n54ce49d.dirty
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.sp
+This is the documentation of \fBtest\fP\&.
+.sp
+\fBNOTE:\fP
+.INDENT 0.0
+.INDENT 3.5
+This is the main page of your project\(aqs \fI\%Sphinx\fP
+documentation. It is formatted in \fI\%reStructuredText\fP\&. Add additional pages by creating
+rst\-files in \fBdocs\fP and adding them to the \fI\%toctree\fP below. Use then
+\fI\%references\fP in order to link
+them from this page, e.g. authors and changes\&.
+.sp
+It is also possible to refer to the documentation of other Python packages
+with the \fI\%Python domain syntax\fP\&. By default you
+can reference the documentation of \fI\%Sphinx\fP,
+\fI\%Python\fP, \fI\%NumPy\fP, \fI\%SciPy\fP, \fI\%matplotlib\fP, \fI\%Pandas\fP, \fI\%Scikit\-Learn\fP\&. You can add more by
+extending the \fBintersphinx_mapping\fP in your Sphinx\(aqs \fBconf.py\fP\&.
+.sp
+The pretty useful extension \fI\%autodoc\fP is activated by
+default and lets you include documentation from docstrings. Docstrings can
+be written in \fI\%Google\fP
+(recommended!), \fI\%NumPy\fP
+and \fI\%classical\fP
+style.
+.UNINDENT
+.UNINDENT
+.SH CONTENTS
+.SS License
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+None
+
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Developers
+.INDENT 0.0
+.IP \(bu 2
+Szymon Zmilczak <\fI\%szymon1313@gmail.com\fP>
+.IP \(bu 2
+Adrian Ćwiertnia <\fI\%adji02@gmail.com\fP>
+.UNINDENT
+.SS Changelog
+.SS Version 0.1
+.INDENT 0.0
+.IP \(bu 2
+Features added
+.UNINDENT
+.SS Modules
+.SS gui module
+.INDENT 0.0
+.TP
+.B class gui.Application(master=None)
+Bases: \fBtkinter.Frame\fP
+.INDENT 7.0
+.TP
+.B on_change_data(*args)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B on_change_type(data)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B on_switch()
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B gui.main()
+.UNINDENT
+.INDENT 0.0
+.TP
+.B gui.pull_down_menu(master, options, default=None, callback=None, **kwargs)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B gui.textvariable(master, default=\(aq\(aq, callback=None)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B gui.update_pdm(pdm, options, default=None)
+.UNINDENT
+.SS test module
+.INDENT 0.0
+.TP
+.B class test.MyTestCase(methodName=\(aqrunTest\(aq)
+Bases: \fBunittest.case.TestCase\fP
+.INDENT 7.0
+.TP
+.B test_f2s()
+.UNINDENT
+.INDENT 7.0
+.TP
+.B test_prefix()
+.UNINDENT
+.INDENT 7.0
+.TP
+.B test_temperature()
+.UNINDENT
+.INDENT 7.0
+.TP
+.B test_value_type()
+.UNINDENT
+.UNINDENT
+.SS units package
+.SS Submodules
+.SS units.core module
+.INDENT 0.0
+.TP
+.B class units.core.ScaleUnit(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aq\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction) -> fractions.Fraction
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aq\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction) -> fractions.Fraction
+.UNINDENT
+.INDENT 7.0
+.TP
+.B unit
+alias of \fI\%Unit\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.core.Unit(value: typing.Any, is_absolute=False)
+Bases: \fI\%object\fP
+.INDENT 7.0
+.TP
+.B convert_to(unit) -> units.core.Unit
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod create_unit(units)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B display_name = \(aq\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B fraction() -> fractions.Fraction
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction) -> fractions.Fraction
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aq\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B smart_str(precision=5)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction) -> fractions.Fraction
+.UNINDENT
+.INDENT 7.0
+.TP
+.B units = []
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%ValueType\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.core.ValueType
+Bases: \fI\%object\fP
+.INDENT 7.0
+.TP
+.B classmethod compatible_with(value_type)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B display_name = \(aq\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod get_types() -> collections.Counter
+.UNINDENT
+.INDENT 7.0
+.TP
+.B types = Counter()
+.UNINDENT
+.INDENT 7.0
+.TP
+.B units = []
+.UNINDENT
+.UNINDENT
+.SS units.distance module
+.INDENT 0.0
+.TP
+.B class units.distance.Distance
+Bases: \fI\%units.core.ValueType\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqDistance\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B units = [<class \(aqunits.distance.Foot\(aq>, <class \(aqunits.distance.Inch\(aq>, <class \(aqunits.distance.Meter\(aq>, <class \(aqunits.distance.Mile\(aq>, <class \(aqunits.distance.Yard\(aq>]
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.distance.Foot(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqFoot\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqft\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.distance.Inch(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqInch\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqin\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.distance.Meter(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqMeter\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqm\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.distance.Mile(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqMile\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqmi\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.distance.Yard(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqYard\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqyd\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Distance\fP
+.UNINDENT
+.UNINDENT
+.SS units.prefix module
+.INDENT 0.0
+.TP
+.B class units.prefix.Atto(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqAtto\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1000000000000000000)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqa\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Eksa(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqTera\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1000000000000000000, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqT\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Femto(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqFemto\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1000000000000000)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqf\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Giga(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqGiga\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1000000000, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqG\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Jokto(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqJokto\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1000000000000000000000000)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqj\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Jotta(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqJotta\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1000000000000000000000000, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqY\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Kilo(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqKilo\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1000, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqk\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Mega(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqMega\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1000000, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqM\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Micro(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqMicro\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1000000)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqμ\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Milli(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqMilli\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1000)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqm\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Nano(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqNano\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1000000000)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqn\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.One(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aq\-\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aq\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Peta(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqPeta\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1000000000000000, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqP\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Pico(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqPico\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1000000000000)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqp\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Prefix(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.ScaleUnit\fP
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Tera(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqTera\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1000000000000, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqT\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Zepto(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqZepto\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1, 1000000000000000000000)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqz\(aq
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.prefix.Zetta(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.prefix.Prefix\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqZetta\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B multiplier = Fraction(1000000000000000000000, 1)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqZ\(aq
+.UNINDENT
+.UNINDENT
+.SS units.temperature module
+.INDENT 0.0
+.TP
+.B class units.temperature.Celsius(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqCelsius\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aq°C\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Temperature\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.temperature.Fahrenheit(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqFahrenheit\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aq°F\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Temperature\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.temperature.Kelvin(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqKelvin\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B short_name = \(aqK\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B value_type
+alias of \fI\%Temperature\fP
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class units.temperature.Temperature
+Bases: \fI\%units.core.ValueType\fP
+.INDENT 7.0
+.TP
+.B display_name = \(aqTemperature\(aq
+.UNINDENT
+.INDENT 7.0
+.TP
+.B units = [<class \(aqunits.temperature.Celsius\(aq>, <class \(aqunits.temperature.Fahrenheit\(aq>, <class \(aqunits.temperature.Kelvin\(aq>]
+.UNINDENT
+.UNINDENT
+.SS units.utils module
+.INDENT 0.0
+.TP
+.B units.utils.fraction_to_str(f, prec=5, auto=True)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B units.utils.get_all_subclasses(cls)
+.UNINDENT
+.SS Module contents
+.SH INDICES AND TABLES
+.INDENT 0.0
+.IP \(bu 2
+genindex
+.IP \(bu 2
+modindex
+.IP \(bu 2
+search
+.UNINDENT
+.SH COPYRIGHT
+2017, Sim1234
+.\" Generated by docutils manpage writer.
+.

@@ -1,0 +1,902 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>units package &#8212; converter 0.0.post0.dev11+n54ce49d.dirty documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.post0.dev11+n54ce49d.dirty',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="test module" href="test.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="units-package">
+<h1>units package<a class="headerlink" href="#units-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-units.core">
+<span id="units-core-module"></span><h2>units.core module<a class="headerlink" href="#module-units.core" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="units.core.ScaleUnit">
+<em class="property">class </em><code class="descclassname">units.core.</code><code class="descname">ScaleUnit</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#ScaleUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ScaleUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.core.ScaleUnit.display_name">
+<code class="descname">display_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.ScaleUnit.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.ScaleUnit.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#ScaleUnit.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ScaleUnit.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ScaleUnit.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1)</em><a class="headerlink" href="#units.core.ScaleUnit.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ScaleUnit.short_name">
+<code class="descname">short_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.ScaleUnit.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.ScaleUnit.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#ScaleUnit.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ScaleUnit.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ScaleUnit.unit">
+<code class="descname">unit</code><a class="headerlink" href="#units.core.ScaleUnit.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">Unit</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.core.Unit">
+<em class="property">class </em><code class="descclassname">units.core.</code><code class="descname">Unit</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#Unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="units.core.Unit.convert_to">
+<code class="descname">convert_to</code><span class="sig-paren">(</span><em>unit</em><span class="sig-paren">)</span> &#x2192; units.core.Unit<a class="reference internal" href="../_modules/units/core.html#Unit.convert_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.convert_to" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.Unit.create_unit">
+<em class="property">classmethod </em><code class="descname">create_unit</code><span class="sig-paren">(</span><em>units</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#Unit.create_unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.create_unit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.Unit.display_name">
+<code class="descname">display_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.Unit.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="units.core.Unit.fraction">
+<code class="descname">fraction</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#Unit.fraction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.fraction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.Unit.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#Unit.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.Unit.short_name">
+<code class="descname">short_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.Unit.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="units.core.Unit.smart_str">
+<code class="descname">smart_str</code><span class="sig-paren">(</span><em>precision=5</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#Unit.smart_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.smart_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.Unit.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#Unit.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.Unit.units">
+<code class="descname">units</code><em class="property"> = []</em><a class="headerlink" href="#units.core.Unit.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.Unit.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.core.Unit.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.core.ValueType" title="units.core.ValueType"><code class="xref py py-class docutils literal"><span class="pre">ValueType</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.core.ValueType">
+<em class="property">class </em><code class="descclassname">units.core.</code><code class="descname">ValueType</code><a class="reference internal" href="../_modules/units/core.html#ValueType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ValueType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dl class="classmethod">
+<dt id="units.core.ValueType.compatible_with">
+<em class="property">classmethod </em><code class="descname">compatible_with</code><span class="sig-paren">(</span><em>value_type</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#ValueType.compatible_with"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ValueType.compatible_with" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ValueType.display_name">
+<code class="descname">display_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.ValueType.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.ValueType.get_types">
+<em class="property">classmethod </em><code class="descname">get_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; collections.Counter<a class="reference internal" href="../_modules/units/core.html#ValueType.get_types"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ValueType.get_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ValueType.types">
+<code class="descname">types</code><em class="property"> = Counter()</em><a class="headerlink" href="#units.core.ValueType.types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.ValueType.units">
+<code class="descname">units</code><em class="property"> = []</em><a class="headerlink" href="#units.core.ValueType.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-units.distance">
+<span id="units-distance-module"></span><h2>units.distance module<a class="headerlink" href="#module-units.distance" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="units.distance.Distance">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Distance</code><a class="reference internal" href="../_modules/units/distance.html#Distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.ValueType" title="units.core.ValueType"><code class="xref py py-class docutils literal"><span class="pre">units.core.ValueType</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Distance.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Distance'</em><a class="headerlink" href="#units.distance.Distance.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Distance.units">
+<code class="descname">units</code><em class="property"> = [&lt;class 'units.distance.Foot'&gt;, &lt;class 'units.distance.Inch'&gt;, &lt;class 'units.distance.Meter'&gt;, &lt;class 'units.distance.Mile'&gt;, &lt;class 'units.distance.Yard'&gt;]</em><a class="headerlink" href="#units.distance.Distance.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Foot">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Foot</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Foot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Foot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Foot.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Foot'</em><a class="headerlink" href="#units.distance.Foot.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Foot.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Foot.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Foot.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Foot.short_name">
+<code class="descname">short_name</code><em class="property"> = 'ft'</em><a class="headerlink" href="#units.distance.Foot.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Foot.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Foot.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Foot.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Foot.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Foot.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Inch">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Inch</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Inch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Inch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Inch.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Inch'</em><a class="headerlink" href="#units.distance.Inch.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Inch.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Inch.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Inch.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Inch.short_name">
+<code class="descname">short_name</code><em class="property"> = 'in'</em><a class="headerlink" href="#units.distance.Inch.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Inch.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Inch.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Inch.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Inch.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Inch.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Meter">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Meter</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Meter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Meter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Meter.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Meter'</em><a class="headerlink" href="#units.distance.Meter.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Meter.short_name">
+<code class="descname">short_name</code><em class="property"> = 'm'</em><a class="headerlink" href="#units.distance.Meter.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Meter.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Meter.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Mile">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Mile</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Mile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Mile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Mile.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Mile'</em><a class="headerlink" href="#units.distance.Mile.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Mile.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Mile.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Mile.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Mile.short_name">
+<code class="descname">short_name</code><em class="property"> = 'mi'</em><a class="headerlink" href="#units.distance.Mile.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Mile.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Mile.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Mile.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Mile.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Mile.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.distance.Yard">
+<em class="property">class </em><code class="descclassname">units.distance.</code><code class="descname">Yard</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Yard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Yard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.distance.Yard.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Yard'</em><a class="headerlink" href="#units.distance.Yard.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Yard.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Yard.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Yard.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Yard.short_name">
+<code class="descname">short_name</code><em class="property"> = 'yd'</em><a class="headerlink" href="#units.distance.Yard.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.distance.Yard.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/distance.html#Yard.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.distance.Yard.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.distance.Yard.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.distance.Yard.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.distance.Distance" title="units.distance.Distance"><code class="xref py py-class docutils literal"><span class="pre">Distance</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-units.prefix">
+<span id="units-prefix-module"></span><h2>units.prefix module<a class="headerlink" href="#module-units.prefix" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="units.prefix.Atto">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Atto</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Atto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Atto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Atto.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Atto'</em><a class="headerlink" href="#units.prefix.Atto.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Atto.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1000000000000000000)</em><a class="headerlink" href="#units.prefix.Atto.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Atto.short_name">
+<code class="descname">short_name</code><em class="property"> = 'a'</em><a class="headerlink" href="#units.prefix.Atto.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Eksa">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Eksa</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Eksa"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Eksa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Eksa.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Tera'</em><a class="headerlink" href="#units.prefix.Eksa.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Eksa.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1000000000000000000, 1)</em><a class="headerlink" href="#units.prefix.Eksa.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Eksa.short_name">
+<code class="descname">short_name</code><em class="property"> = 'T'</em><a class="headerlink" href="#units.prefix.Eksa.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Femto">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Femto</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Femto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Femto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Femto.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Femto'</em><a class="headerlink" href="#units.prefix.Femto.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Femto.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1000000000000000)</em><a class="headerlink" href="#units.prefix.Femto.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Femto.short_name">
+<code class="descname">short_name</code><em class="property"> = 'f'</em><a class="headerlink" href="#units.prefix.Femto.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Giga">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Giga</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Giga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Giga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Giga.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Giga'</em><a class="headerlink" href="#units.prefix.Giga.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Giga.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1000000000, 1)</em><a class="headerlink" href="#units.prefix.Giga.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Giga.short_name">
+<code class="descname">short_name</code><em class="property"> = 'G'</em><a class="headerlink" href="#units.prefix.Giga.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Jokto">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Jokto</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Jokto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Jokto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Jokto.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Jokto'</em><a class="headerlink" href="#units.prefix.Jokto.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Jokto.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1000000000000000000000000)</em><a class="headerlink" href="#units.prefix.Jokto.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Jokto.short_name">
+<code class="descname">short_name</code><em class="property"> = 'j'</em><a class="headerlink" href="#units.prefix.Jokto.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Jotta">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Jotta</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Jotta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Jotta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Jotta.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Jotta'</em><a class="headerlink" href="#units.prefix.Jotta.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Jotta.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1000000000000000000000000, 1)</em><a class="headerlink" href="#units.prefix.Jotta.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Jotta.short_name">
+<code class="descname">short_name</code><em class="property"> = 'Y'</em><a class="headerlink" href="#units.prefix.Jotta.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Kilo">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Kilo</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Kilo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Kilo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Kilo.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Kilo'</em><a class="headerlink" href="#units.prefix.Kilo.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Kilo.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1000, 1)</em><a class="headerlink" href="#units.prefix.Kilo.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Kilo.short_name">
+<code class="descname">short_name</code><em class="property"> = 'k'</em><a class="headerlink" href="#units.prefix.Kilo.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Mega">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Mega</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Mega"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Mega" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Mega.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Mega'</em><a class="headerlink" href="#units.prefix.Mega.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Mega.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1000000, 1)</em><a class="headerlink" href="#units.prefix.Mega.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Mega.short_name">
+<code class="descname">short_name</code><em class="property"> = 'M'</em><a class="headerlink" href="#units.prefix.Mega.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Micro">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Micro</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Micro"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Micro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Micro.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Micro'</em><a class="headerlink" href="#units.prefix.Micro.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Micro.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1000000)</em><a class="headerlink" href="#units.prefix.Micro.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Micro.short_name">
+<code class="descname">short_name</code><em class="property"> = 'μ'</em><a class="headerlink" href="#units.prefix.Micro.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Milli">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Milli</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Milli"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Milli" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Milli.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Milli'</em><a class="headerlink" href="#units.prefix.Milli.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Milli.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1000)</em><a class="headerlink" href="#units.prefix.Milli.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Milli.short_name">
+<code class="descname">short_name</code><em class="property"> = 'm'</em><a class="headerlink" href="#units.prefix.Milli.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Nano">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Nano</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Nano"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Nano" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Nano.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Nano'</em><a class="headerlink" href="#units.prefix.Nano.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Nano.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1000000000)</em><a class="headerlink" href="#units.prefix.Nano.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Nano.short_name">
+<code class="descname">short_name</code><em class="property"> = 'n'</em><a class="headerlink" href="#units.prefix.Nano.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.One">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">One</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#One"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.One" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.One.display_name">
+<code class="descname">display_name</code><em class="property"> = '-'</em><a class="headerlink" href="#units.prefix.One.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.One.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1)</em><a class="headerlink" href="#units.prefix.One.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.One.short_name">
+<code class="descname">short_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.prefix.One.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Peta">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Peta</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Peta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Peta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Peta.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Peta'</em><a class="headerlink" href="#units.prefix.Peta.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Peta.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1000000000000000, 1)</em><a class="headerlink" href="#units.prefix.Peta.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Peta.short_name">
+<code class="descname">short_name</code><em class="property"> = 'P'</em><a class="headerlink" href="#units.prefix.Peta.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Pico">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Pico</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Pico"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Pico" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Pico.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Pico'</em><a class="headerlink" href="#units.prefix.Pico.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Pico.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1000000000000)</em><a class="headerlink" href="#units.prefix.Pico.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Pico.short_name">
+<code class="descname">short_name</code><em class="property"> = 'p'</em><a class="headerlink" href="#units.prefix.Pico.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Prefix">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Prefix</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Prefix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.ScaleUnit" title="units.core.ScaleUnit"><code class="xref py py-class docutils literal"><span class="pre">units.core.ScaleUnit</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Tera">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Tera</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Tera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Tera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Tera.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Tera'</em><a class="headerlink" href="#units.prefix.Tera.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Tera.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1000000000000, 1)</em><a class="headerlink" href="#units.prefix.Tera.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Tera.short_name">
+<code class="descname">short_name</code><em class="property"> = 'T'</em><a class="headerlink" href="#units.prefix.Tera.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Zepto">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Zepto</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Zepto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Zepto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Zepto.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Zepto'</em><a class="headerlink" href="#units.prefix.Zepto.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Zepto.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1, 1000000000000000000000)</em><a class="headerlink" href="#units.prefix.Zepto.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Zepto.short_name">
+<code class="descname">short_name</code><em class="property"> = 'z'</em><a class="headerlink" href="#units.prefix.Zepto.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.prefix.Zetta">
+<em class="property">class </em><code class="descclassname">units.prefix.</code><code class="descname">Zetta</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/prefix.html#Zetta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.prefix.Zetta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.prefix.Prefix" title="units.prefix.Prefix"><code class="xref py py-class docutils literal"><span class="pre">units.prefix.Prefix</span></code></a></p>
+<dl class="attribute">
+<dt id="units.prefix.Zetta.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Zetta'</em><a class="headerlink" href="#units.prefix.Zetta.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Zetta.multiplier">
+<code class="descname">multiplier</code><em class="property"> = Fraction(1000000000000000000000, 1)</em><a class="headerlink" href="#units.prefix.Zetta.multiplier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.prefix.Zetta.short_name">
+<code class="descname">short_name</code><em class="property"> = 'Z'</em><a class="headerlink" href="#units.prefix.Zetta.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-units.temperature">
+<span id="units-temperature-module"></span><h2>units.temperature module<a class="headerlink" href="#module-units.temperature" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="units.temperature.Celsius">
+<em class="property">class </em><code class="descclassname">units.temperature.</code><code class="descname">Celsius</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Celsius"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Celsius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.temperature.Celsius.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Celsius'</em><a class="headerlink" href="#units.temperature.Celsius.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.temperature.Celsius.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Celsius.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Celsius.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Celsius.short_name">
+<code class="descname">short_name</code><em class="property"> = '°C'</em><a class="headerlink" href="#units.temperature.Celsius.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.temperature.Celsius.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Celsius.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Celsius.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Celsius.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.temperature.Celsius.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.temperature.Temperature" title="units.temperature.Temperature"><code class="xref py py-class docutils literal"><span class="pre">Temperature</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.temperature.Fahrenheit">
+<em class="property">class </em><code class="descclassname">units.temperature.</code><code class="descname">Fahrenheit</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Fahrenheit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Fahrenheit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.temperature.Fahrenheit.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Fahrenheit'</em><a class="headerlink" href="#units.temperature.Fahrenheit.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.temperature.Fahrenheit.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Fahrenheit.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Fahrenheit.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Fahrenheit.short_name">
+<code class="descname">short_name</code><em class="property"> = '°F'</em><a class="headerlink" href="#units.temperature.Fahrenheit.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.temperature.Fahrenheit.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Fahrenheit.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Fahrenheit.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Fahrenheit.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.temperature.Fahrenheit.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.temperature.Temperature" title="units.temperature.Temperature"><code class="xref py py-class docutils literal"><span class="pre">Temperature</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.temperature.Kelvin">
+<em class="property">class </em><code class="descclassname">units.temperature.</code><code class="descname">Kelvin</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/temperature.html#Kelvin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Kelvin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<dl class="attribute">
+<dt id="units.temperature.Kelvin.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Kelvin'</em><a class="headerlink" href="#units.temperature.Kelvin.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Kelvin.short_name">
+<code class="descname">short_name</code><em class="property"> = 'K'</em><a class="headerlink" href="#units.temperature.Kelvin.short_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Kelvin.value_type">
+<code class="descname">value_type</code><a class="headerlink" href="#units.temperature.Kelvin.value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#units.temperature.Temperature" title="units.temperature.Temperature"><code class="xref py py-class docutils literal"><span class="pre">Temperature</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="units.temperature.Temperature">
+<em class="property">class </em><code class="descclassname">units.temperature.</code><code class="descname">Temperature</code><a class="reference internal" href="../_modules/units/temperature.html#Temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.temperature.Temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.ValueType" title="units.core.ValueType"><code class="xref py py-class docutils literal"><span class="pre">units.core.ValueType</span></code></a></p>
+<dl class="attribute">
+<dt id="units.temperature.Temperature.display_name">
+<code class="descname">display_name</code><em class="property"> = 'Temperature'</em><a class="headerlink" href="#units.temperature.Temperature.display_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.temperature.Temperature.units">
+<code class="descname">units</code><em class="property"> = [&lt;class 'units.temperature.Celsius'&gt;, &lt;class 'units.temperature.Fahrenheit'&gt;, &lt;class 'units.temperature.Kelvin'&gt;]</em><a class="headerlink" href="#units.temperature.Temperature.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-units.utils">
+<span id="units-utils-module"></span><h2>units.utils module<a class="headerlink" href="#module-units.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="units.utils.fraction_to_str">
+<code class="descclassname">units.utils.</code><code class="descname">fraction_to_str</code><span class="sig-paren">(</span><em>f</em>, <em>prec=5</em>, <em>auto=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/utils.html#fraction_to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.utils.fraction_to_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="units.utils.get_all_subclasses">
+<code class="descclassname">units.utils.</code><code class="descname">get_all_subclasses</code><span class="sig-paren">(</span><em>cls</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/utils.html#get_all_subclasses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.utils.get_all_subclasses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-units">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-units" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">units package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-units.core">units.core module</a></li>
+<li><a class="reference internal" href="#module-units.distance">units.distance module</a></li>
+<li><a class="reference internal" href="#module-units.prefix">units.prefix module</a></li>
+<li><a class="reference internal" href="#module-units.temperature">units.temperature module</a></li>
+<li><a class="reference internal" href="#module-units.utils">units.utils module</a></li>
+<li><a class="reference internal" href="#module-units">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Modules</a><ul>
+      <li>Previous: <a href="test.html" title="previous chapter">test module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/units.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Sim1234.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/api/units.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
