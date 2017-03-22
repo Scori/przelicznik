@@ -59,11 +59,30 @@ class Kilo(Prefix):
     short_name = 'k'
     multiplier = Fraction('1000')**1
 
+class Hekto(Prefix):
+    display_name = 'Hekto'
+    short_name = 'hl'
+    multiplier = Fraction('10')**2
+
+class Deka(Prefix):
+    display_name = 'Deka'
+    short_name = 'dag'
+    multiplier = Fraction('10')**1
 
 class One(Prefix):
     display_name = '-'
     short_name = ''
     multiplier = Fraction('1000')**0
+
+class Decy(Prefix):
+    display_name = 'Decy'
+    short_name = 'dm'
+    multiplier = Fraction('10')**-1
+
+class Centy(Prefix):
+    display_name = 'Centy'
+    short_name = 'cm'
+    multiplier = Fraction('10') ** -2
 
 
 class Milli(Prefix):
