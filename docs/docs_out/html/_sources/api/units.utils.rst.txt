@@ -6,7 +6,7 @@ units.utils module
 Class diagram
 -------------
 
-.. uml:: units.utils
+.. pyreverse:: units.utils
 
 .. automodule:: units.utils
     :members:

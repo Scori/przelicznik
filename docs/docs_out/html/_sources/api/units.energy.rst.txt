@@ -6,7 +6,7 @@ units.energy module
 Class diagram
 -------------
 
-.. uml:: units.energy
+.. pyreverse:: units.energy
 
 .. automodule:: units.energy
     :members:

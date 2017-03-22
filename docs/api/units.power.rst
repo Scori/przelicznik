@@ -6,7 +6,7 @@ units.power module
 Class diagram
 -------------
 
-.. uml:: units.power
+.. pyreverse:: units.power
 
 .. automodule:: units.power
     :members:

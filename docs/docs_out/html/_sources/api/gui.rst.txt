@@ -6,7 +6,7 @@ gui module
 Class diagram
 -------------
 
-.. uml:: gui
+.. pyreverse:: gui
 
 .. automodule:: gui
     :members:

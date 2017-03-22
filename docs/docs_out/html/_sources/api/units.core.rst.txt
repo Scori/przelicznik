@@ -6,7 +6,7 @@ units.core module
 Class diagram
 -------------
 
-.. uml:: units.core
+.. pyreverse:: units.core
 
 .. automodule:: units.core
     :members:

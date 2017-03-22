@@ -48,7 +48,7 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.intersphinx', 'sphinx.ext.todo',
               'sphinx.ext.doctest', 'sphinx.ext.ifconfig', 'sphinx.ext.pngmath',
               'sphinx.ext.napoleon',
               'sphinx.ext.graphviz', 'sphinx.ext.inheritance_diagram',
-              'sphinx_pyreverse',
+              'sphinx_reverse',
               ]
 
 # Add any paths that contain templates here, relative to this directory.

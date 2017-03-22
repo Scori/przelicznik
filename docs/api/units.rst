@@ -6,7 +6,7 @@ units package
 Class diagram
 -------------
 
-.. uml:: units
+.. pyreverse:: units
 
 Module contents
 ---------------

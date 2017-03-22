@@ -6,7 +6,8 @@ units.distance module
 Class diagram
 -------------
 
-.. uml:: units.distance
+.. pyreverse:: units.distance
+
 
 .. automodule:: units.distance
     :members:

@@ -6,7 +6,7 @@ test module
 Class diagram
 -------------
 
-.. uml:: test
+.. pyreverse:: test
 
 .. automodule:: test
     :members:

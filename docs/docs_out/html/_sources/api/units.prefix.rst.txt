@@ -6,7 +6,7 @@ units.prefix module
 Class diagram
 -------------
 
-.. uml:: units.prefix
+.. pyreverse:: units.prefix
 
 .. automodule:: units.prefix
     :members:

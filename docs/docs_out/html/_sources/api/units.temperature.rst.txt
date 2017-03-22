@@ -6,7 +6,7 @@ units.temperature module
 Class diagram
 -------------
 
-.. uml:: units.temperature
+.. pyreverse:: units.temperature
 
 
 .. automodule:: units.temperature

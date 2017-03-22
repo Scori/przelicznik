@@ -6,7 +6,7 @@ units.pressure module
 Class diagram
 -------------
 
-.. uml:: units.pressure
+.. pyreverse:: units.pressure
 
 .. automodule:: units.pressure
     :members:
