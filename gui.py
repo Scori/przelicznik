@@ -44,16 +44,17 @@ def update_pdm(pdm, options, default=None):
     pdm.after(1, lambda: pdm.textvariable.set(default))
 
 
-class Application(tkinter.Frame):
+class ConversionFrame(tkinter.Frame):
     """
     Main GUI class. Creates widgets, handles data input and delegates unit conversion to *units* library.
     """
+
     def __init__(self, master=None):
         """
         Create widgets and open application window. 
         """
         master.title("Converter")
-        super(Application, self).__init__(master=master)
+        super(ConversionFrame, self).__init__(master=master)
         self.value_types = OrderedDict(((t.__name__, t) for t in units.value_types))
         self.prefixes = OrderedDict(((p.display_name, p) for p in units.prefixes))
         self.units = OrderedDict(((u.display_name, u) for u in units.units))
@@ -152,19 +153,39 @@ class Application(tkinter.Frame):
             self.data_out.insert(0, v_out)
 
 
-def main():
+class Application:
     """
-    Application main function. 
+    Singleton class used for running window application 
     """
-    root = tkinter.Tk()
-    app = Application(master=root)
-    app.mainloop()
-    try:
-        root.destroy()
-    except tkinter.TclError:
-        pass
+    @staticmethod
+    def __new__(cls):
+        """
+        Method creating or retrieving class instance 
+        """
+        try:
+            return cls.__instance
+        except AttributeError:
+            cls.__instance = super(Application, cls).__new__(cls)
+        return cls.__instance
+
+    def __init__(self):
+        """
+        Constructor method
+        """
+        self.root = tkinter.Tk()
+        self.app = ConversionFrame(master=self.root)
+
+    def start(self):
+        """
+        Method for starting window application main loop
+        """
+        self.app.mainloop()
+        try:
+            self.root.destroy()
+        except tkinter.TclError:
+            pass
 
 
 if __name__ == '__main__':
-    main()
+    Application().start()
 

@@ -4,6 +4,7 @@ Module containing all test related code.
 """
 import unittest
 from units import *
+from gui import *
 
 
 class UnitsTestCase(unittest.TestCase):
@@ -82,6 +83,9 @@ class UnitsTestCase(unittest.TestCase):
 
         self.assertEqual(fraction_to_str(Fraction('10/3'), 10), '3.3333333333')
         self.assertEqual(fraction_to_str(Fraction('123456789/987654321098765432109876543210'), 50), '0.00000000000000000000012499999884843750012814453124')
+
+    def test_gui(self):
+        self.assertTrue(Application() is Application())
 
 
 if __name__ == '__main__':

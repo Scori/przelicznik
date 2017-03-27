@@ -1,8 +1,8 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CONVERTER" "1" "Mar 23, 2017" "0.0.post0.dev19+n1530b01.dirty" "converter"
+.TH "CONVERTER" "1" "Mar 27, 2017" "0.0.post0.dev20+n94f5e76.dirty" "converter"
 .SH NAME
-converter \- converter 0.0.post0.dev19+n1530b01.dirty
+converter \- converter 0.0.post0.dev20+n94f5e76.dirty
 .
 .nr rst2man-indent-level 0
 .
@@ -90,7 +90,19 @@ Features added
 Module containing all GUI related code.
 .INDENT 0.0
 .TP
-.B class gui.Application(master=None)
+.B class gui.Application
+Bases: \fI\%object\fP
+.sp
+Singleton class used for running window application
+.INDENT 7.0
+.TP
+.B start()
+Method for starting window application main loop
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class gui.ConversionFrame(master=None)
 Bases: \fBtkinter.Frame\fP
 .sp
 Main GUI class. Creates widgets, handles data input and delegates unit conversion to \fIunits\fP library.
@@ -109,11 +121,6 @@ Selected variable type change handler.
 .B on_switch()
 Unit switch button handler.
 .UNINDENT
-.UNINDENT
-.INDENT 0.0
-.TP
-.B gui.main()
-Application main function.
 .UNINDENT
 .INDENT 0.0
 .TP
@@ -145,6 +152,10 @@ Test container for units library.
 .TP
 .B test_f2s()
 Test Fraction to str conversion.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B test_gui()
 .UNINDENT
 .INDENT 7.0
 .TP
@@ -219,7 +230,7 @@ Returns new Unit instance representing current value in given \fIunit\fP\&.
 .INDENT 7.0
 .TP
 .B classmethod create_unit(units)
-Create new Unit subclass representing product of given units.
+Factory method creating new Unit subclass representing product of given units.
 .UNINDENT
 .INDENT 7.0
 .TP

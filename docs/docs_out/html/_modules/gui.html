@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>gui &#8212; converter 0.0.post0.dev19+n1530b01.dirty documentation</title>
+    <title>gui &#8212; converter 0.0.post0.dev20+n94f5e76.dirty documentation</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.0.post0.dev19+n1530b01.dirty',
+        VERSION:     '0.0.post0.dev20+n94f5e76.dirty',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -88,16 +88,17 @@
     <span class="n">pdm</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">pdm</span><span class="o">.</span><span class="n">textvariable</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">default</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="Application"><a class="viewcode-back" href="../api/gui.html#gui.Application">[docs]</a><span class="k">class</span> <span class="nc">Application</span><span class="p">(</span><span class="n">tkinter</span><span class="o">.</span><span class="n">Frame</span><span class="p">):</span>
+<div class="viewcode-block" id="ConversionFrame"><a class="viewcode-back" href="../api/gui.html#gui.ConversionFrame">[docs]</a><span class="k">class</span> <span class="nc">ConversionFrame</span><span class="p">(</span><span class="n">tkinter</span><span class="o">.</span><span class="n">Frame</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Main GUI class. Creates widgets, handles data input and delegates unit conversion to *units* library.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create widgets and open application window. </span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">master</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Converter&quot;</span><span class="p">)</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">Application</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">master</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ConversionFrame</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">master</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">value_types</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(((</span><span class="n">t</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">units</span><span class="o">.</span><span class="n">value_types</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">prefixes</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(((</span><span class="n">p</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">units</span><span class="o">.</span><span class="n">prefixes</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(((</span><span class="n">u</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">units</span><span class="o">.</span><span class="n">units</span><span class="p">))</span>
@@ -138,7 +139,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">on_change_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_type</span><span class="o">.</span><span class="n">textvariable</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
 
-<div class="viewcode-block" id="Application.on_switch"><a class="viewcode-back" href="../api/gui.html#gui.Application.on_switch">[docs]</a>    <span class="k">def</span> <span class="nf">on_switch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ConversionFrame.on_switch"><a class="viewcode-back" href="../api/gui.html#gui.ConversionFrame.on_switch">[docs]</a>    <span class="k">def</span> <span class="nf">on_switch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Unit switch button handler.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -157,7 +158,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">on_change_data</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Application.on_change_type"><a class="viewcode-back" href="../api/gui.html#gui.Application.on_change_type">[docs]</a>    <span class="k">def</span> <span class="nf">on_change_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<div class="viewcode-block" id="ConversionFrame.on_change_type"><a class="viewcode-back" href="../api/gui.html#gui.ConversionFrame.on_change_type">[docs]</a>    <span class="k">def</span> <span class="nf">on_change_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Selected variable type change handler.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -168,7 +169,7 @@
     <span class="c1"># def on_in_error(self):</span>
     <span class="c1">#     self.data_in[&#39;bg&#39;] = &#39;red&#39;</span>
 
-<div class="viewcode-block" id="Application.on_change_data"><a class="viewcode-back" href="../api/gui.html#gui.Application.on_change_data">[docs]</a>    <span class="k">def</span> <span class="nf">on_change_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="ConversionFrame.on_change_data"><a class="viewcode-back" href="../api/gui.html#gui.ConversionFrame.on_change_data">[docs]</a>    <span class="k">def</span> <span class="nf">on_change_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Selected units, prefixes and input data change handler. Performs unit conversion. </span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -196,21 +197,41 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">data_out</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">v_out</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="main"><a class="viewcode-back" href="../api/gui.html#gui.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="viewcode-block" id="Application"><a class="viewcode-back" href="../api/gui.html#gui.Application">[docs]</a><span class="k">class</span> <span class="nc">Application</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Application main function. </span>
+<span class="sd">    Singleton class used for running window application </span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">root</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
-    <span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">root</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">root</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
-    <span class="k">except</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">TclError</span><span class="p">:</span>
-        <span class="k">pass</span></div>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method creating or retrieving class instance </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__instance</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">__instance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Application</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__instance</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor method</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">ConversionFrame</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Application.start"><a class="viewcode-back" href="../api/gui.html#gui.Application.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method for starting window application main loop</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">TclError</span><span class="p">:</span>
+            <span class="k">pass</span></div></div>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
+    <span class="n">Application</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
 </pre></div>
 

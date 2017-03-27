@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>gui module &#8212; converter 0.0.post0.dev19+n1530b01.dirty documentation</title>
+    <title>gui module &#8212; converter 0.0.post0.dev20+n94f5e76.dirty documentation</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.0.post0.dev19+n1530b01.dirty',
+        VERSION:     '0.0.post0.dev20+n94f5e76.dirty',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -45,16 +45,17 @@
             
   <div class="section" id="gui-module">
 <h1>gui module<a class="headerlink" href="#gui-module" title="Permalink to this headline">¶</a></h1>
-<img src="../_images/inheritance-cb78b0535243f0c7e6f97ae11649a890abd86ce8.png" alt="Inheritance diagram of gui" usemap="#inheritancea0d65241b0" class="inheritance"/>
+<img src="../_images/inheritance-e006cb93605f0f4ff09e23f9e15a5df1ec9bfee6.png" alt="Inheritance diagram of gui" usemap="#inheritancea0d65241b0" class="inheritance"/>
 <map id="inheritancea0d65241b0" name="inheritancea0d65241b0">
-<area shape="rect" id="node1" href="#gui.Application" target="_top" title="Main GUI class. Creates widgets, handles data input and delegates unit conversion to *units* library." alt="" coords="623,80,729,105"/>
-<area shape="rect" id="node2" title="Frame widget which may contain other widgets and can have a 3D border." alt="" coords="476,80,575,105"/>
-<area shape="rect" id="node3" title="Internal class." alt="" coords="144,5,277,31"/>
-<area shape="rect" id="node5" title="Internal class." alt="" coords="325,80,428,105"/>
-<area shape="rect" id="node4" title="Internal class." alt="" coords="5,5,96,31"/>
-<area shape="rect" id="node6" title="Geometry manager Grid." alt="" coords="167,55,254,80"/>
-<area shape="rect" id="node7" title="Geometry manager Pack." alt="" coords="165,104,257,129"/>
-<area shape="rect" id="node8" title="Geometry manager Place." alt="" coords="163,153,258,179"/>
+<area shape="rect" id="node1" href="#gui.Application" target="_top" title="Singleton class used for running window application" alt="" coords="5,53,109,78"/>
+<area shape="rect" id="node2" href="#gui.ConversionFrame" target="_top" title="Main GUI class. Creates widgets, handles data input and delegates unit conversion to *units* library." alt="" coords="624,78,763,103"/>
+<area shape="rect" id="node3" title="Frame widget which may contain other widgets and can have a 3D border." alt="" coords="480,78,577,103"/>
+<area shape="rect" id="node4" title="Internal class." alt="" coords="156,5,286,30"/>
+<area shape="rect" id="node6" title="Internal class." alt="" coords="333,78,433,103"/>
+<area shape="rect" id="node5" title="Internal class." alt="" coords="13,5,102,30"/>
+<area shape="rect" id="node7" title="Geometry manager Grid." alt="" coords="179,53,264,78"/>
+<area shape="rect" id="node8" title="Geometry manager Pack." alt="" coords="176,102,266,126"/>
+<area shape="rect" id="node9" title="Geometry manager Place." alt="" coords="175,150,267,174"/>
 </map>
 <div class="section" id="class-diagram">
 <h2>Class diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
@@ -62,33 +63,40 @@
 <span class="target" id="module-gui"></span><p>Module containing all GUI related code.</p>
 <dl class="class">
 <dt id="gui.Application">
-<em class="property">class </em><code class="descclassname">gui.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>master=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#Application"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">gui.</code><code class="descname">Application</code><a class="reference internal" href="../_modules/gui.html#Application"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Singleton class used for running window application</p>
+<dl class="method">
+<dt id="gui.Application.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#Application.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for starting window application main loop</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="gui.ConversionFrame">
+<em class="property">class </em><code class="descclassname">gui.</code><code class="descname">ConversionFrame</code><span class="sig-paren">(</span><em>master=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#ConversionFrame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.ConversionFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tkinter.Frame</span></code></p>
 <p>Main GUI class. Creates widgets, handles data input and delegates unit conversion to <em>units</em> library.</p>
 <dl class="method">
-<dt id="gui.Application.on_change_data">
-<code class="descname">on_change_data</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#Application.on_change_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application.on_change_data" title="Permalink to this definition">¶</a></dt>
+<dt id="gui.ConversionFrame.on_change_data">
+<code class="descname">on_change_data</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#ConversionFrame.on_change_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.ConversionFrame.on_change_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selected units, prefixes and input data change handler. Performs unit conversion.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="gui.Application.on_change_type">
-<code class="descname">on_change_type</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#Application.on_change_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application.on_change_type" title="Permalink to this definition">¶</a></dt>
+<dt id="gui.ConversionFrame.on_change_type">
+<code class="descname">on_change_type</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#ConversionFrame.on_change_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.ConversionFrame.on_change_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selected variable type change handler.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="gui.Application.on_switch">
-<code class="descname">on_switch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#Application.on_switch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.Application.on_switch" title="Permalink to this definition">¶</a></dt>
+<dt id="gui.ConversionFrame.on_switch">
+<code class="descname">on_switch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#ConversionFrame.on_switch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.ConversionFrame.on_switch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unit switch button handler.</p>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="function">
-<dt id="gui.main">
-<code class="descclassname">gui.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gui.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gui.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>Application main function.</p>
 </dd></dl>
 
 <dl class="function">

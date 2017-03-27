@@ -34,7 +34,7 @@ class ValueType:
 
     def __new__(cls, *value_types):
         """
-        Create new ValueType subclass representing product of cls and all given *value_types* 
+        Factory method creating new ValueType subclass representing product of cls and all given *value_types* 
         """
         types = cls.get_types()
         for t in value_types:
@@ -111,7 +111,7 @@ class Unit:
     @classmethod
     def create_unit(cls, units):
         """
-        Create new Unit subclass representing product of given units.
+        Factory method creating new Unit subclass representing product of given units.
         """
         return type(
             ''.join([unit.display_name for unit in units]),
@@ -124,6 +124,7 @@ class Unit:
             },
         )
 
+    @staticmethod
     def __new__(cls, *args, **kwargs) -> typing.TypeVar('Unit'):
         """
         If Unit subclasses are passed, returns new Unit subclass representing product of cls and all given units.
