@@ -1,0 +1,6 @@
+<map id="inheritancecb66ddedf6" name="inheritancecb66ddedf6">
+<area shape="rect" id="node1" href="#units.core.MultiUnit" target="_top" title="Utility class allowing combining multiple units" alt="" coords="199,29,334,55"/>
+<area shape="rect" id="node2" href="#units.core.Unit" target="_top" title="Class representing unit of given *value_type*. Instances of this class represent not only unit but also its value." alt="" coords="24,55,131,80"/>
+<area shape="rect" id="node3" href="#units.core.ScaleUnit" target="_top" title="Utility class providing scaling functionality." alt="" coords="197,79,336,104"/>
+<area shape="rect" id="node4" href="#units.core.ValueType" target="_top" title="Abstract class representing type of value." alt="" coords="5,5,149,31"/>
+</map>

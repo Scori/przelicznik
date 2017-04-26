@@ -1,6 +1,6 @@
 # coding: utf8
 """
-Core module for units package. Defines base classes like ValueType and Unit and utility class ScaleUnit. 
+Core module for units package. Defines base classes l*ValueType* and *Unit* and utility classes *MultiUnit* and *ScaleUnit*. 
 """
 from fractions import Fraction
 from collections import Counter
@@ -59,7 +59,6 @@ class Unit:
     value_type = ValueType
     display_name = ''
     short_name = ''
-    units = []
 
     def __init__(self, value: typing.Any, is_absolute=False):
         """
@@ -108,30 +107,14 @@ class Unit:
         """
         return '{0}({1})'.format(type(self).__qualname__, self.absolute_value.__repr__())
 
-    @classmethod
-    def create_unit(cls, units):
-        """
-        Factory method creating new Unit subclass representing product of given units.
-        """
-        return type(
-            ''.join([unit.display_name for unit in units]),
-            (Unit, ),
-            {
-                'display_name': ' '.join([unit.display_name for unit in units]),
-                'short_name': ''.join([unit.short_name for unit in units]),
-                'units': units,
-                'value_type': ValueType(*[unit.value_type for unit in units]),
-            },
-        )
-
     @staticmethod
     def __new__(cls, *args, **kwargs) -> typing.TypeVar('Unit'):
         """
-        If Unit subclasses are passed, returns new Unit subclass representing product of cls and all given units.
+        If Unit subclasses are passed, returns new MultiUnit subclass representing product of cls and all given units.
         In other case instantiates cls and initialises it with passed value.  
         """
         if kwargs == {} and args and all([isinstance(arg, type) and issubclass(arg, Unit) for arg in args]):
-            return cls.create_unit([cls] + list(args))
+            return MultiUnit.combine_units([cls] + list(args))
         return super(Unit, cls).__new__(cls)
 
     def __call__(self, *args, **kwargs) -> 'Unit':
@@ -145,8 +128,7 @@ class Unit:
         """
         Converts from absolute value to value in this unit.
         """
-        for unit in reversed(cls.units):
-            value = unit.from_absolute_value(value)
+        # raise NotImplemented
         return value
 
     @classmethod
@@ -154,6 +136,40 @@ class Unit:
         """
         Converts from value in this unit to absolute value.
         """
+        # raise NotImplemented
+        return value
+
+
+class MultiUnit(Unit):
+    """
+    Utility class allowing combining multiple units
+    """
+    units = []
+
+    @classmethod
+    def combine_units(cls, units):
+        """
+        Factory method creating new MultiUnit subclass representing product of given units.
+        """
+        return type(
+            ''.join([unit.display_name for unit in units]),
+            (MultiUnit,),
+            {
+                'display_name': ' '.join([unit.display_name for unit in units]),
+                'short_name': ''.join([unit.short_name for unit in units]),
+                'units': units,
+                'value_type': ValueType(*[unit.value_type for unit in units]),
+            },
+        )
+
+    @classmethod
+    def from_absolute_value(cls, value: Fraction) -> Fraction:
+        for unit in reversed(cls.units):
+            value = unit.from_absolute_value(value)
+        return value
+
+    @classmethod
+    def to_absolute_value(cls, value: Fraction) -> Fraction:
         for unit in cls.units:
             value = unit.to_absolute_value(value)
         return value
@@ -163,10 +179,7 @@ class ScaleUnit(Unit):
     """
     Utility class providing scaling functionality. 
     """
-    display_name = ''
-    short_name = ''
     multiplier = Fraction('1')
-    unit = Unit
 
     @classmethod
     def from_absolute_value(cls, value: Fraction) -> Fraction:

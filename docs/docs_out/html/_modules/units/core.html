@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>units.core &#8212; converter 0.0.post0.dev20+n94f5e76.dirty documentation</title>
+    <title>units.core &#8212; converter 0.0.post0.dev21+ne119306.dirty documentation</title>
     
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.0.post0.dev20+n94f5e76.dirty',
+        VERSION:     '0.0.post0.dev21+ne119306.dirty',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -44,7 +44,7 @@
   <h1>Source code for units.core</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf8</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Core module for units package. Defines base classes like ValueType and Unit and utility class ScaleUnit. </span>
+<span class="sd">Core module for units package. Defines base classes l*ValueType* and *Unit* and utility classes *MultiUnit* and *ScaleUnit*. </span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">from</span> <span class="nn">fractions</span> <span class="k">import</span> <span class="n">Fraction</span>
 <span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
@@ -103,7 +103,6 @@
     <span class="n">value_type</span> <span class="o">=</span> <span class="n">ValueType</span>
     <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">units</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">,</span> <span class="n">is_absolute</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -152,30 +151,14 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">(</span><span class="si">{1}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__qualname__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">absolute_value</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">())</span>
 
-    <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Unit.create_unit"><a class="viewcode-back" href="../../api/units.core.html#units.core.Unit.create_unit">[docs]</a>    <span class="k">def</span> <span class="nf">create_unit</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">units</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Factory method creating new Unit subclass representing product of given units.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">type</span><span class="p">(</span>
-            <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">unit</span><span class="o">.</span><span class="n">display_name</span> <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">]),</span>
-            <span class="p">(</span><span class="n">Unit</span><span class="p">,</span> <span class="p">),</span>
-            <span class="p">{</span>
-                <span class="s1">&#39;display_name&#39;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">unit</span><span class="o">.</span><span class="n">display_name</span> <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">]),</span>
-                <span class="s1">&#39;short_name&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">unit</span><span class="o">.</span><span class="n">short_name</span> <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">]),</span>
-                <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="n">units</span><span class="p">,</span>
-                <span class="s1">&#39;value_type&#39;</span><span class="p">:</span> <span class="n">ValueType</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">unit</span><span class="o">.</span><span class="n">value_type</span> <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">]),</span>
-            <span class="p">},</span>
-        <span class="p">)</span></div>
-
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;Unit&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        If Unit subclasses are passed, returns new Unit subclass representing product of cls and all given units.</span>
+<span class="sd">        If Unit subclasses are passed, returns new MultiUnit subclass representing product of cls and all given units.</span>
 <span class="sd">        In other case instantiates cls and initialises it with passed value.  </span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">kwargs</span> <span class="o">==</span> <span class="p">{}</span> <span class="ow">and</span> <span class="n">args</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">([</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">Unit</span><span class="p">)</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]):</span>
-            <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">create_unit</span><span class="p">([</span><span class="bp">cls</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">MultiUnit</span><span class="o">.</span><span class="n">combine_units</span><span class="p">([</span><span class="bp">cls</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
         <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">Unit</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Unit&#39;</span><span class="p">:</span>
@@ -189,8 +172,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Converts from absolute value to value in this unit.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">units</span><span class="p">):</span>
-            <span class="n">value</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">from_absolute_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="c1"># raise NotImplemented</span>
         <span class="k">return</span> <span class="n">value</span></div>
 
     <span class="nd">@classmethod</span>
@@ -198,6 +180,40 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Converts from value in this unit to absolute value.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># raise NotImplemented</span>
+        <span class="k">return</span> <span class="n">value</span></div></div>
+
+
+<div class="viewcode-block" id="MultiUnit"><a class="viewcode-back" href="../../api/units.core.html#units.core.MultiUnit">[docs]</a><span class="k">class</span> <span class="nc">MultiUnit</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Utility class allowing combining multiple units</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">units</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="MultiUnit.combine_units"><a class="viewcode-back" href="../../api/units.core.html#units.core.MultiUnit.combine_units">[docs]</a>    <span class="k">def</span> <span class="nf">combine_units</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">units</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Factory method creating new MultiUnit subclass representing product of given units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">type</span><span class="p">(</span>
+            <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">unit</span><span class="o">.</span><span class="n">display_name</span> <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">]),</span>
+            <span class="p">(</span><span class="n">MultiUnit</span><span class="p">,),</span>
+            <span class="p">{</span>
+                <span class="s1">&#39;display_name&#39;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">unit</span><span class="o">.</span><span class="n">display_name</span> <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">]),</span>
+                <span class="s1">&#39;short_name&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">unit</span><span class="o">.</span><span class="n">short_name</span> <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">]),</span>
+                <span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="n">units</span><span class="p">,</span>
+                <span class="s1">&#39;value_type&#39;</span><span class="p">:</span> <span class="n">ValueType</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">unit</span><span class="o">.</span><span class="n">value_type</span> <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">units</span><span class="p">]),</span>
+            <span class="p">},</span>
+        <span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="MultiUnit.from_absolute_value"><a class="viewcode-back" href="../../api/units.core.html#units.core.MultiUnit.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Fraction</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">units</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">from_absolute_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="MultiUnit.to_absolute_value"><a class="viewcode-back" href="../../api/units.core.html#units.core.MultiUnit.to_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">to_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Fraction</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
             <span class="n">value</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">to_absolute_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">value</span></div></div>
@@ -207,10 +223,7 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Utility class providing scaling functionality. </span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">display_name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
-    <span class="n">unit</span> <span class="o">=</span> <span class="n">Unit</span>
 
     <span class="nd">@classmethod</span>
 <div class="viewcode-block" id="ScaleUnit.from_absolute_value"><a class="viewcode-back" href="../../api/units.core.html#units.core.ScaleUnit.from_absolute_value">[docs]</a>    <span class="k">def</span> <span class="nf">from_absolute_value</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Fraction</span><span class="p">:</span>

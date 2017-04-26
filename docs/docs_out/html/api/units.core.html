@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>units.core module &#8212; converter 0.0.post0.dev20+n94f5e76.dirty documentation</title>
+    <title>units.core module &#8212; converter 0.0.post0.dev21+ne119306.dirty documentation</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.0.post0.dev20+n94f5e76.dirty',
+        VERSION:     '0.0.post0.dev21+ne119306.dirty',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -45,26 +45,50 @@
             
   <div class="section" id="units-core-module">
 <h1>units.core module<a class="headerlink" href="#units-core-module" title="Permalink to this headline">¶</a></h1>
-<img src="../_images/inheritance-d493195c324d2ef8c2ce49ca0519ca8e8e377a06.png" alt="Inheritance diagram of units.core" usemap="#inheritancecb66ddedf6" class="inheritance"/>
+<img src="../_images/inheritance-8c1fa99b366642587686a638a147b1218d47c209.png" alt="Inheritance diagram of units.core" usemap="#inheritancecb66ddedf6" class="inheritance"/>
 <map id="inheritancecb66ddedf6" name="inheritancecb66ddedf6">
-<area shape="rect" id="node1" href="#units.core.ScaleUnit" target="_top" title="Utility class providing scaling functionality." alt="" coords="197,55,336,80"/>
+<area shape="rect" id="node1" href="#units.core.MultiUnit" target="_top" title="Utility class allowing combining multiple units" alt="" coords="199,29,334,55"/>
 <area shape="rect" id="node2" href="#units.core.Unit" target="_top" title="Class representing unit of given *value_type*. Instances of this class represent not only unit but also its value." alt="" coords="24,55,131,80"/>
-<area shape="rect" id="node3" href="#units.core.ValueType" target="_top" title="Abstract class representing type of value." alt="" coords="5,5,149,31"/>
+<area shape="rect" id="node3" href="#units.core.ScaleUnit" target="_top" title="Utility class providing scaling functionality." alt="" coords="197,79,336,104"/>
+<area shape="rect" id="node4" href="#units.core.ValueType" target="_top" title="Abstract class representing type of value." alt="" coords="5,5,149,31"/>
 </map>
 <div class="section" id="class-diagram">
 <h2>Class diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/class_diagram_units.core.png"><img alt="../_images/class_diagram_units.core.png" src="../_images/class_diagram_units.core.png" style="width: 383px;" /></a>
-<span class="target" id="module-units.core"></span><p>Core module for units package. Defines base classes like ValueType and Unit and utility class ScaleUnit.</p>
+<a class="reference internal image-reference" href="../_images/class_diagram_units.core.png"><img alt="../_images/class_diagram_units.core.png" src="../_images/class_diagram_units.core.png" style="width: 598px;" /></a>
+<span class="target" id="module-units.core"></span><p>Core module for units package. Defines base classes l*ValueType* and <em>Unit</em> and utility classes <em>MultiUnit</em> and <em>ScaleUnit</em>.</p>
+<dl class="class">
+<dt id="units.core.MultiUnit">
+<em class="property">class </em><code class="descclassname">units.core.</code><code class="descname">MultiUnit</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#MultiUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.MultiUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
+<p>Utility class allowing combining multiple units</p>
+<dl class="classmethod">
+<dt id="units.core.MultiUnit.combine_units">
+<em class="property">classmethod </em><code class="descname">combine_units</code><span class="sig-paren">(</span><em>units</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#MultiUnit.combine_units"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.MultiUnit.combine_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Factory method creating new MultiUnit subclass representing product of given units.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.MultiUnit.from_absolute_value">
+<em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#MultiUnit.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.MultiUnit.from_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="units.core.MultiUnit.to_absolute_value">
+<em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#MultiUnit.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.MultiUnit.to_absolute_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="units.core.MultiUnit.units">
+<code class="descname">units</code><em class="property"> = []</em><a class="headerlink" href="#units.core.MultiUnit.units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="class">
 <dt id="units.core.ScaleUnit">
 <em class="property">class </em><code class="descclassname">units.core.</code><code class="descname">ScaleUnit</code><span class="sig-paren">(</span><em>value: typing.Any</em>, <em>is_absolute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#ScaleUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ScaleUnit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">units.core.Unit</span></code></a></p>
 <p>Utility class providing scaling functionality.</p>
-<dl class="attribute">
-<dt id="units.core.ScaleUnit.display_name">
-<code class="descname">display_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.ScaleUnit.display_name" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="classmethod">
 <dt id="units.core.ScaleUnit.from_absolute_value">
 <em class="property">classmethod </em><code class="descname">from_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#ScaleUnit.from_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ScaleUnit.from_absolute_value" title="Permalink to this definition">¶</a></dt>
@@ -75,21 +99,10 @@
 <code class="descname">multiplier</code><em class="property"> = Fraction(1, 1)</em><a class="headerlink" href="#units.core.ScaleUnit.multiplier" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
-<dt id="units.core.ScaleUnit.short_name">
-<code class="descname">short_name</code><em class="property"> = ''</em><a class="headerlink" href="#units.core.ScaleUnit.short_name" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="classmethod">
 <dt id="units.core.ScaleUnit.to_absolute_value">
 <em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#ScaleUnit.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.ScaleUnit.to_absolute_value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="attribute">
-<dt id="units.core.ScaleUnit.unit">
-<code class="descname">unit</code><a class="headerlink" href="#units.core.ScaleUnit.unit" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#units.core.Unit" title="units.core.Unit"><code class="xref py py-class docutils literal"><span class="pre">Unit</span></code></a></p>
-</dd></dl>
 
 </dd></dl>
 
@@ -102,12 +115,6 @@
 <dt id="units.core.Unit.convert_to">
 <code class="descname">convert_to</code><span class="sig-paren">(</span><em>unit: Unit</em><span class="sig-paren">)</span> &#x2192; units.core.Unit<a class="reference internal" href="../_modules/units/core.html#Unit.convert_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.convert_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns new Unit instance representing current value in given <em>unit</em>.</p>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="units.core.Unit.create_unit">
-<em class="property">classmethod </em><code class="descname">create_unit</code><span class="sig-paren">(</span><em>units</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/units/core.html#Unit.create_unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.create_unit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Factory method creating new Unit subclass representing product of given units.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -143,11 +150,6 @@
 <em class="property">classmethod </em><code class="descname">to_absolute_value</code><span class="sig-paren">(</span><em>value: fractions.Fraction</em><span class="sig-paren">)</span> &#x2192; fractions.Fraction<a class="reference internal" href="../_modules/units/core.html#Unit.to_absolute_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#units.core.Unit.to_absolute_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts from value in this unit to absolute value.</p>
 </dd></dl>
-
-<dl class="attribute">
-<dt id="units.core.Unit.units">
-<code class="descname">units</code><em class="property"> = []</em><a class="headerlink" href="#units.core.Unit.units" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="attribute">
 <dt id="units.core.Unit.value_type">

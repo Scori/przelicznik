@@ -1,8 +1,8 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "CONVERTER" "1" "Mar 27, 2017" "0.0.post0.dev20+n94f5e76.dirty" "converter"
+.TH "CONVERTER" "1" "Mar 27, 2017" "0.0.post0.dev21+ne119306.dirty" "converter"
 .SH NAME
-converter \- converter 0.0.post0.dev20+n94f5e76.dirty
+converter \- converter 0.0.post0.dev21+ne119306.dirty
 .
 .nr rst2man-indent-level 0
 .
@@ -183,17 +183,37 @@ Package providing unit conversion functionality.
 .SS Class diagram
 [image]
 .sp
-Core module for units package. Defines base classes like ValueType and Unit and utility class ScaleUnit.
+Core module for units package. Defines base classes l*ValueType* and \fIUnit\fP and utility classes \fIMultiUnit\fP and \fIScaleUnit\fP\&.
+.INDENT 0.0
+.TP
+.B class units.core.MultiUnit(value: typing.Any, is_absolute=False)
+Bases: \fI\%units.core.Unit\fP
+.sp
+Utility class allowing combining multiple units
+.INDENT 7.0
+.TP
+.B classmethod combine_units(units)
+Factory method creating new MultiUnit subclass representing product of given units.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod from_absolute_value(value: fractions.Fraction) -> fractions.Fraction
+.UNINDENT
+.INDENT 7.0
+.TP
+.B classmethod to_absolute_value(value: fractions.Fraction) -> fractions.Fraction
+.UNINDENT
+.INDENT 7.0
+.TP
+.B units = []
+.UNINDENT
+.UNINDENT
 .INDENT 0.0
 .TP
 .B class units.core.ScaleUnit(value: typing.Any, is_absolute=False)
 Bases: \fI\%units.core.Unit\fP
 .sp
 Utility class providing scaling functionality.
-.INDENT 7.0
-.TP
-.B display_name = \(aq\(aq
-.UNINDENT
 .INDENT 7.0
 .TP
 .B classmethod from_absolute_value(value: fractions.Fraction) -> fractions.Fraction
@@ -204,16 +224,7 @@ Utility class providing scaling functionality.
 .UNINDENT
 .INDENT 7.0
 .TP
-.B short_name = \(aq\(aq
-.UNINDENT
-.INDENT 7.0
-.TP
 .B classmethod to_absolute_value(value: fractions.Fraction) -> fractions.Fraction
-.UNINDENT
-.INDENT 7.0
-.TP
-.B unit
-alias of \fI\%Unit\fP
 .UNINDENT
 .UNINDENT
 .INDENT 0.0
@@ -226,11 +237,6 @@ Class representing unit of given \fIvalue_type\fP\&. Instances of this class rep
 .TP
 .B convert_to(unit: Unit) -> units.core.Unit
 Returns new Unit instance representing current value in given \fIunit\fP\&.
-.UNINDENT
-.INDENT 7.0
-.TP
-.B classmethod create_unit(units)
-Factory method creating new Unit subclass representing product of given units.
 .UNINDENT
 .INDENT 7.0
 .TP
@@ -259,10 +265,6 @@ Get str representation of current value with given \fIprecision\fP\&.
 .TP
 .B classmethod to_absolute_value(value: fractions.Fraction) -> fractions.Fraction
 Converts from value in this unit to absolute value.
-.UNINDENT
-.INDENT 7.0
-.TP
-.B units = []
 .UNINDENT
 .INDENT 7.0
 .TP
